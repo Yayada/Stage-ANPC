@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Conseils</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="elaborerCV">
+        Elaborer un CV
+      </ion-segment-button>
+      <ion-segment-button value="elaborerLettreMotivation">
+        Elaborer une lettre de motivation 
+      </ion-segment-button>
+      <ion-segment-button value="preparerEntretien">
+        Se préparer à un entretien d'embauche
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'elaborerCV'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2></h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'elaborerLettreMotivation'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Migrants ayant bénéficié de la régularisation execptionnelle</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Autres migrants en situation régulière</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'preparerEntretien'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Contrat de travail pour étranger</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Contrat d'insertion</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-title>
+            Description
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <span ion-text color="white" showWhen="ios">Annuler</span>
+                <ion-icon color="white" name="md-close" showWhen="android,windows"></ion-icon>     
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-item>
+            <ion-icon name="people" color="primary" item-left></ion-icon>
+            <h5 ion-text color="secondary" class="line-break">Autres migrants en situation régulière</h5>
+        </ion-item>
+        <ion-card-content>
+            <ion-note>
+                Le Service de l’Emploi des Migrants (SEM), instruit et vise :
+            </ion-note>
+            <ion-list>
+                <ion-item>
+                    <p class="line-break" color="note">Les contrats de travail à l’immigration pour les étrangers (premier établissement, renouvellement)
+                    </p>
+                </ion-item>
+                <ion-item>
+                    <p class="line-break" color="note">Les demandes de maintien en service des étrangers atteints par la limite d’âge.</p>
+                </ion-item>
+                <ion-item>
+                    <p class="line-break" color="note">Les imprimés à remplir sont mis à la disposition sur le site du MEAS : <span ion-text color="primary">www.emploi.gov.ma</span>,Service
+                        en ligne / services au profit des migrants</p>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <ion-note>
+                Pour toutes informations complémentaires, prière de :
+            </ion-note>
+            <ion-list>
+                <ion-item>
+                    <p class="line-break" color="note"> Contacter le Bureau d’Accueil et d’Information du Service à l'adresse : Service de l’Emploi des Migrants,
+                        5, rue Tameslouht, 10010 RABAT</p>
+                </ion-item>
+                <ion-item>
+                    <p class="line-break" color="note">Consulter le site du ministère de l’emploi : <span ion-text color="primary">www.emploi.gov.ma</span>                        services en ligne « Services au profit des migrants » </p>
+                </ion-item>
+                <ion-item>
+                    <p class="line-break" color="note">ou consulter le site de l’Anapec : <span ion-text color="primary">www.anapec.org</span>rubrique Créer
+                        votre espace employeur/ salarié étrangers</p>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

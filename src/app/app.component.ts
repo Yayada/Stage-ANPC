@@ -4,7 +4,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { DroitDuTravailPage } from '../pages/droitDuTravail/droitDuTravail';
+import { ConseilsPage } from '../pages/conseils/conseils';
+import { InfosPage } from '../pages/infos/infos';
+import { FormationsPage } from '../pages/formations/formations';
+import { OffresEmploiPage } from '../pages/offresEmploi/offresEmploi';
+import { AnapecPage } from '../pages/anapec/anapec';
+import { VideosPage } from '../pages/videos/videos';
+import { PrestationsPage } from '../pages/prestations/prestations';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -21,8 +29,14 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Prestations', component: PrestationsPage },
+      { title: 'Droit du travail', component: DroitDuTravailPage },
+      { title: 'Conseils', component: ConseilsPage },
+      { title: 'Infos', component: InfosPage },
+      { title: 'Formations', component: FormationsPage },
+      { title: 'Offres d\'emploi', component: OffresEmploiPage },
+      { title: 'Anapec', component: AnapecPage },
+      { title: 'Vidéos', component: VideosPage },
     ];
 
   }

@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Formations</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="formations">
+      <ion-segment-button value="trouverFormation">
+        Où je peux trouver ma formation
+      </ion-segment-button>
+      <ion-segment-button value="formationQualifiante">
+        Formation qualifiante dans le cadre du programme Taehil
+      </ion-segment-button>
+      <ion-segment-button value="formationPartenariale">
+        Formation partenariale
+      </ion-segment-button>
+      <ion-segment-button value="formationDistance">
+        Formation à distance
+      </ion-segment-button>
+      <ion-segment-button value="formationPublic">
+        Formations réalisées par les acteurs public
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="formations">
+    <ion-list *ngSwitchCase="'trouverFormation'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2></h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2></h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Formation partenariale</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Formation à distance</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Formations réalisées par les acteurs public</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'formationQualifiante'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Portail Anapec</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>M'inscrire à l'Anapec</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Conseils et infos</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Email, sms , newsletter</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Réseaux Sociaux</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Téléphone</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
