@@ -20,7 +20,8 @@
     </ion-card>
     <ion-card>
         <ion-card-content>
-            <p class="line-break" ion-text color="primary">Les migrants ayant bénéficiés de la régularisation exceptionnelle en 2014, peuvent avoir accès au contrat d’insertion
+            <p class="line-break" ion-text color="primary">Les migrants ayant bénéficiés de la régularisation exceptionnelle en <b>2014</b>, peuvent avoir accès au contrat
+                d’insertion
             </p>
             <ion-note color="note">
                 Permettre aux chercheurs d’emploi de développer leurs compétences pratiques au sein de l’entreprise et de renforcer leurs
@@ -31,12 +32,15 @@
                 <p class="line-break" ion-text>Population cible :</p>
                 <ion-item>
                     <p class="line-break" color="note">Diplômés de l’enseignement supérieur.</p>
+                    <hr>
                 </ion-item>
                 <ion-item>
                     <p class="line-break" color="note">Lauréats de la formation professionnelle.</p>
+                    <hr>
                 </ion-item>
                 <ion-item>
                     <p class="line-break" color="note">Bacheliers.</p>
+                    <hr>
                 </ion-item>
             </ion-list>
         </ion-card-content>
@@ -50,9 +54,11 @@
             <ion-list>
                 <ion-item>
                     <p class="line-break" color="note">Contrat de stage de <span ion-text color="primary">24 mois maximum</span> .</p>
+                    <hr>
                 </ion-item>
                 <ion-item>
-                    <p class="line-break" color="note">Indemnité mensuelle octroyée : 1600 à 6000 DH.</p>
+                    <p class="line-break" color="note">Indemnité mensuelle octroyée : <span ion-text color="primary">1600 à 6000 DH </span>.</p>
+                    <hr>
                 </ion-item>
             </ion-list>
         </ion-card-content>
@@ -70,10 +76,12 @@
                         <ion-list inset>
                             <ion-item>
                                 <p class="line-break" color="note">Des cotisations patronales et salariales dues à la CNSS/TFP</p>
+                                <hr>
                             </ion-item>
                             <ion-item>
                                 <p class="line-break" color="note">De l’Impôt sur le Revenu (IR) pour les candidats inscrits à l’ANAPEC depuis 6 mois et plus
                                 </p>
+                                <hr>
                             </ion-item>
                         </ion-list>
                     </p>
@@ -106,22 +114,41 @@
                 </ion-item>
                 <ion-item>
                     <p class="line-break" color="note">Instruction par l’employeur du contrat en ligne sur le portail de l’ANAPEC
-                        <span ion-text color="primary">www.anapec.org</span>.</p>
+                        <span ion-text color="primary" (click)="openLink('www.anapec.org')">www.anapec.org</span>.</p>
                 </ion-item>
                 <ion-item>
                     <p class="line-break" color="note">Dépôt par l’employeur auprès d’une agence de l’ANAPEC, pour validation et visa, d’un dossier constitué
                         des pièces suivantes :
                         <ion-list>
-                            <ion-item> <p class="line-break" color="note" >3 exemplaires du contrat d’insertion édités à partir du portail, signés et cachetés par l’employeur
-                                et le stagiaire</p></ion-item>
-                            <ion-item> <p class="line-break" color="note">Une copie légalisée de la CIN du stagiaire</p></ion-item>
-                            <ion-item> <p class="line-break" color="note">Une copie légalisée du diplôme du stagiaire</p></ion-item>
-                            <ion-item> <p class="line-break" color="note">Une déclaration sur l’honneur du stagiaire qui atteste n’avoir jamais bénéficié d’un contrat
-                                d’insertion (uniquement en cas de signature du premier contrat)</p></ion-item>
-                            <ion-item> <p class="line-break" color="note">Une fiche d’identification de l’entreprise (uniquement dans le cas d’une entreprise nouvellement
-                                cliente)</p> </ion-item>
-                            <ion-item><p class="line-break" color="note"><span ion-text color="primary">N° d’immatriculation à la CNSS </span> du stagiaire s’il n’est
-                                pas renseigné sur le contrat</p> </ion-item>
+                            <ion-item>
+                                <p class="line-break" color="note">3 exemplaires du contrat d’insertion édités à partir du portail, signés et cachetés par l’employeur
+                                    et le stagiaire</p>
+                                <hr>
+                            </ion-item>
+                            <ion-item>
+                                <p class="line-break" color="note">Une copie légalisée de la CIN du stagiaire</p>
+                                <hr>
+                            </ion-item>
+                            <ion-item>
+                                <p class="line-break" color="note">Une copie légalisée du diplôme du stagiaire</p>
+                                <hr>
+                            </ion-item>
+                            <ion-item>
+                                <p class="line-break" color="note">Une déclaration sur l’honneur du stagiaire qui atteste n’avoir jamais bénéficié d’un contrat
+                                    d’insertion (uniquement en cas de signature du premier contrat)</p>
+                                <hr>
+                            </ion-item>
+                            <ion-item>
+                                <p class="line-break" color="note">Une fiche d’identification de l’entreprise (uniquement dans le cas d’une entreprise nouvellement
+                                    cliente)
+                                </p>
+                                <hr>
+                            </ion-item>
+                            <ion-item>
+                                <p class="line-break" color="note"><span ion-text color="primary">N° d’immatriculation  </span>à la CNSS du stagiaire s’il n’est
+                                    pas renseigné sur le contrat</p>
+                                <hr>
+                            </ion-item>
                         </ion-list>
                     </p>
                 </ion-item>

@@ -17,41 +17,53 @@
             <ion-icon name="people" color="primary" item-left></ion-icon>
             <h5 ion-text color="secondary" class="line-break">Autres migrants en situation régulière</h5>
         </ion-item>
+    </ion-card>
+    <ion-card>
         <ion-card-content>
-            <ion-note>
-                Le Service de l’Emploi des Migrants (SEM), instruit et vise :
-            </ion-note>
+            <ion-item>
+                <ion-icon name="briefcase" color="primary" item-left></ion-icon>
+                <h4 ion-text color="secondary" class="line-break">Le Service de l’Emploi des Migrants , instruit et vise</h4>
+            </ion-item>
             <ion-list>
                 <ion-item>
                     <p class="line-break" color="note">Les contrats de travail à l’immigration pour les étrangers (premier établissement, renouvellement)
                     </p>
+                    <hr>
                 </ion-item>
                 <ion-item>
                     <p class="line-break" color="note">Les demandes de maintien en service des étrangers atteints par la limite d’âge.</p>
+                    <hr>
                 </ion-item>
                 <ion-item>
-                    <p class="line-break" color="note">Les imprimés à remplir sont mis à la disposition sur le site du MEAS : <span ion-text color="primary">www.emploi.gov.ma</span>,Service
-                        en ligne / services au profit des migrants</p>
+                    <p class="line-break" color="note">Les imprimés à remplir sont mis à la disposition sur le site du MEAS : <span ion-text color="primary"
+                            (click)="openLink('www.emploi.gov.ma')"><b>www.emploi.gov.ma </b></span>,Service en ligne / services
+                        au profit des migrants</p>
+                    <hr>
                 </ion-item>
             </ion-list>
         </ion-card-content>
     </ion-card>
     <ion-card>
         <ion-card-content>
-            <ion-note>
-                Pour toutes informations complémentaires, prière de :
-            </ion-note>
+            <ion-item>
+                <ion-icon name="information-circle" color="primary" item-left></ion-icon>
+                <h4 ion-text color="secondary" class="line-break">Pour toutes informations complémentaires, prière de :</h4>
+            </ion-item>
             <ion-list>
                 <ion-item>
                     <p class="line-break" color="note"> Contacter le Bureau d’Accueil et d’Information du Service à l'adresse : Service de l’Emploi des Migrants,
-                        5, rue Tameslouht, 10010 RABAT</p>
+                        <span ion-text color="primary">5, rue Tameslouht, 10010 RABAT</span></p>
+                    <hr>
                 </ion-item>
                 <ion-item>
-                    <p class="line-break" color="note">Consulter le site du ministère de l’emploi : <span ion-text color="primary">www.emploi.gov.ma</span>                        services en ligne « Services au profit des migrants » </p>
+                    <p class="line-break" color="note">Consulter le site du ministère de l’emploi : <span ion-text color="primary" (click)="openLink('www.emploi.gov.ma')"><b>www.emploi.gov.ma </b></span>services
+                        en ligne « Services au profit des migrants » </p>
+                    <hr>
                 </ion-item>
                 <ion-item>
-                    <p class="line-break" color="note">ou consulter le site de l’Anapec : <span ion-text color="primary">www.anapec.org</span>rubrique Créer
-                        votre espace employeur/ salarié étrangers</p>
+                    <p class="line-break" color="note">Ou consulter le site de l’Anapec : <span ion-text color="primary" (click)="openLink('www.anapec.org')"><b>www.anapec.org </b></span>rubrique
+                        Créer votre espace employeur/ salarié étrangers</p>
+                    <hr>
                 </ion-item>
             </ion-list>
         </ion-card-content>

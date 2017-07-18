@@ -19,14 +19,16 @@
         </ion-item>
         <ion-card-content>
             <ion-note>
+                <b>
                 Les salariés migrants ayant bénéficié de la régularisation exceptionnelle en 2014 avec un Titre de séjour délivré par les
                 services de la DGSN portant la mention « TRAVAIL » sont exonérés de l’attestation d’activité délivrée par
                 l’Anapec.
+                </b>
             </ion-note>
             <ion-note color="note">
                 En cas de contrats de droit commun, le contrat de travail doit se conformer au modèle du Contrat de Travail d'Etranger téléchargeable
                 au niveau du lien :
-                <span ion-text color="primary">www.emploi.gov.ma</span> et doit être soumis au Ministère de l'Emploi et des
+                <span ion-text color="primary" (click) = "openLink('www.emploi.gov.ma')"><b>www.emploi.gov.ma</b></span> et doit être soumis au Ministère de l'Emploi et des
                 Affaires Sociales (MEAS) pour visa.
             </ion-note>
         </ion-card-content>
