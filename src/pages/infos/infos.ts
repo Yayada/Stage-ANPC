@@ -6,6 +6,7 @@ import { ModalActeursPublicPage } from './modals/marcheTravail/acteursPublic';
 import { ModalSecteursRecrutePage } from './modals/secteursMetiers/secteursRecrute';
 import { ModalMetiersPorteursPage } from './modals/secteursMetiers/metiersPorteurs';
 import { ModalActeursInstitutionnelsPage } from './modals/acteursInstitutionnels/acteursInsitutionnels';
+import { ModalAidePage } from './modals/aide/aide';
 
 @Component({
   selector: 'page-infos',
@@ -24,22 +25,22 @@ export class InfosPage {
     let modal = null;
     switch (index) {
 
-      case 11: modal = this.modalCtrl.create(ModalSitesRecrutementPage);
+      case 111: modal = this.modalCtrl.create(ModalSitesRecrutementPage);
         modal.present();
         break;
-      case 12: modal = this.modalCtrl.create(ModalCentreRegionauxPage);
+      case 112: modal = this.modalCtrl.create(ModalCentreRegionauxPage);
         modal.present();
         break;
-      case 13: modal = this.modalCtrl.create(ModalActeursPublicPage);
+      case 113: modal = this.modalCtrl.create(ModalActeursPublicPage);
         modal.present();
         break;
-      case 21: modal = this.modalCtrl.create(ModalSecteursRecrutePage);
+      case 121: modal = this.modalCtrl.create(ModalSecteursRecrutePage);
         modal.present();
         break;
-      case 22: modal = this.modalCtrl.create(ModalMetiersPorteursPage);
+      case 122: modal = this.modalCtrl.create(ModalMetiersPorteursPage);
         modal.present();
         break;
-      case 3: modal = this.modalCtrl.create(ModalActeursInstitutionnelsPage);
+      case 13: modal = this.modalCtrl.create(ModalActeursInstitutionnelsPage);
         modal.present();
         break;
     }    

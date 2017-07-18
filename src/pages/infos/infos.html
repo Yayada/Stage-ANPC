@@ -33,15 +33,15 @@
             <h6 class="line-break">Acteurs publics/privés</h6>
           </ion-item>
           <ion-list inset>
-            <button ion-item class="no-padding" (click)="showModalDetails(11)">
+            <button ion-item class="no-padding" (click)="showModalDetails(111)">
               <p class="line-break">Sites de recrutement</p>                
               <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>          
             </button>
-            <button ion-item class="no-padding" (click)="showModalDetails(12)">
+            <button ion-item class="no-padding" (click)="showModalDetails(112)">
               <p class="line-break">Centre régionnaux et chambres de commerce</p>
               <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>          
             </button>
-            <button ion-item class="no-padding" (click)="showModalDetails(13)">
+            <button ion-item class="no-padding" (click)="showModalDetails(113)">
               <p class="line-break">Acteurs publics de l'emploi</p>
               <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>          
             </button>
@@ -54,11 +54,11 @@
             <h6 class="line-break">Secteurs qui rectrutent et métiers porteurs</h6>
           </ion-item>
           <ion-list inset>
-            <button ion-item class="no-padding" (click)="showModalDetails(21)">
+            <button ion-item class="no-padding" (click)="showModalDetails(121)">
               <p class="line-break">Secteurs porteurs</p>                
               <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>          
             </button>
-            <button ion-item class="no-padding" (click)="showModalDetails(22)">
+            <button ion-item class="no-padding" (click)="showModalDetails(122)">
               <p class="line-break">Métiers qui rectrutent</p>
               <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>          
             </button>
@@ -67,7 +67,7 @@
       </ion-card>
       <ion-card>
         <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetails(3)">
+          <button ion-item class="no-padding" (click)="showModalDetails(13)">
             <h6 class=" line-break">Acteurs institutionnels</h6>
             <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>          
           </button>
@@ -137,7 +137,112 @@
       </ion-card>
     </ion-list>
     <ion-list *ngSwitchCase="'aide'">
-
+      <ion-card>
+        <ion-item>
+          <ion-icon name="help" color="primary" item-left></ion-icon>
+          <h3 ion-text color="secondary" class="line-break">Qui peut m'aider</h3>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <h4 ion-text color="secondary" class="line-break">Pour vous appuyer dans votre recherche d’emploi, vous disposez des éléments suivants </h4>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="browsers" color="primary" item-left></ion-icon>
+          <p class="line-break" ion-text ion-text color="primary" (click)="openLink('www.anapec.org')">http://www.anapec.org</p>
+        </ion-item>
+        <ion-item>
+          <p class="line-break" ion-text ion-text color="primary">
+            <ion-icon name="contacts" color="primary" item-left></ion-icon>Les conseillers en emploi à l'anapec à travers :
+          </p>
+          <ion-list>
+            <ion-item>
+              <p class="line-break">Des entretiens et des ateliers sur les techniques de recherche d'emploi (voir rubriques prestations)</p>
+              <hr>
+            </ion-item>
+            <ion-item>
+              <p class="line-break">Un diagnostic de votre situation par rapport à l'emploi recherché</p>
+              <hr>
+            </ion-item>
+            <ion-item>
+              <p class="line-break">Une évaluation de vos besoins</p>
+              <hr>
+            </ion-item>
+            <ion-item>
+              <p class="line-break">Une orientation vers les métiers qui vous conviennent</p>
+              <hr>
+            </ion-item>
+            <ion-item>
+              <p class="line-break">Des mises en relation avec les employeurs après postulation</p>
+              <hr>
+            </ion-item>
+            <ion-item>
+              <p class="line-break">Des formations complémentaires ou de reconversion</p>
+              <hr>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="browsers" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">L'exploitation des sites suivants</h4>
+        </ion-item>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <p class="line-break" ion-text ion-text color="primary" (click)="openLink('www.offres-emploi.ma/maroc')">http://www.offres-emploi.ma/maroc.</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.rekrute.com')">http://www.rekrute.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.amaljob.com')">http://www.amaljob.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.manpower-maroc.com')">http://www.manpower-maroc.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.crit-job.com')">http://www.crit-job.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.emploi-maroc.com')">http://www.emploi-maroc.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.emploi.ma')">http://www.emploi.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.marocemploi.net')">http://www.marocemploi.net</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.diorh.com')">http://www.diorh.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.bilconsulting.com')">http://www.bilconsulting.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.tectra.ma')">http://www.tectra.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.jobrapido.ma')">http://www.jobrapido.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.optioncarriere.ma')">http://www.optioncarriere.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.rhperformance.net')">http://www.rhperformance.net</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.menara.ma')">http://www.menara.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.lematinemploi.com')">http://www.lematinemploi.com</p>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
   </div>
 
