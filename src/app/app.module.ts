@@ -26,6 +26,10 @@ import { ModalAutreMigrantsPage } from '../pages/droitDuTravail/modals/procedure
 import { ModalMigrantsBeneficiantsPage } from '../pages/droitDuTravail/modals/procedureRecrutement/migrantsBeneficiants';
 import { ModalSitesRecrutementPage } from '../pages/infos/modals/marcheTravail/sitesRecrutement';
 import { ModalCentreRegionauxPage } from '../pages/infos/modals/marcheTravail/centreRegionaux';
+import { ModalActeursPublicPage } from '../pages/infos/modals/marcheTravail/acteursPublic';
+import { ModalSecteursRecrutePage } from '../pages/infos/modals/secteursMetiers/secteursRecrute';
+import { ModalMetiersPorteursPage } from '../pages/infos/modals/secteursMetiers/metiersPorteurs';
+import { ModalActeursInstitutionnelsPage } from '../pages/infos/modals/acteursInstitutionnels/acteursInsitutionnels';
 
 import { PrestationModalServiceProvider } from '../providers/prestation-modal-service/prestation-modal-service';
 
@@ -57,7 +61,11 @@ import { HttpModule } from '@angular/http';
     ModalAutreMigrantsPage,
     ModalMigrantsBeneficiantsPage,
     ModalSitesRecrutementPage,
-    ModalCentreRegionauxPage
+    ModalCentreRegionauxPage,
+    ModalActeursPublicPage,
+    ModalSecteursRecrutePage,
+    ModalMetiersPorteursPage,
+    ModalActeursInstitutionnelsPage
   ],
   imports: [
     BrowserModule,
@@ -87,7 +95,11 @@ import { HttpModule } from '@angular/http';
     ModalAutreMigrantsPage,
     ModalMigrantsBeneficiantsPage,
     ModalSitesRecrutementPage,
-    ModalCentreRegionauxPage
+    ModalCentreRegionauxPage,
+    ModalActeursPublicPage,
+    ModalSecteursRecrutePage,
+    ModalMetiersPorteursPage,
+    ModalActeursInstitutionnelsPage
   ],
   providers: [
     StatusBar,

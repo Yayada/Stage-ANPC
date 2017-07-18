@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-title>
+            Description
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <span ion-text color="white" showWhen="ios">Annuler</span>
+                <ion-icon color="white" name="md-close" showWhen="android,windows"></ion-icon>     
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-item>
+            <ion-icon name="briefcase" color="primary" item-left></ion-icon>
+            <h4 ion-text color="secondary" class="line-break">Acteurs publics de l'emploi</h4>
+        </ion-item>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <h3 ion-text color="primary" class="line-break"><ion-icon name="home" color="secondary" item-left></ion-icon> Agence nationale de promotion de l’emploi et des compétences</h3>
+                    <h4 (click)="openLink('www.anapec.org')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>www.anapec.org</h4>
+                <hr>
+                </ion-item>
+                <ion-item>
+                    <h3 ion-text color="primary" class="line-break"><ion-icon name="home" color="secondary" item-left></ion-icon> Office de la formation professionnelle et de la promotion du travail </h3>
+                    <h4 (click)="openLink('www.ofppt.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>www.ofppt.ma</h4>
+                <hr>
+                </ion-item>
+                <ion-item>
+                    <h3 ion-text color="primary" class="line-break"><ion-icon name="home" color="secondary" item-left></ion-icon> Département de la formation professionnelle  </h3>
+                    <h4 (click)="openLink('www.dfp.gov.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>www.dfp.gov.ma</h4>
+                <hr>
+                </ion-item>
+                <ion-item>
+                    <h3 ion-text color="primary" class="line-break"><ion-icon name="home" color="secondary" item-left></ion-icon> Ministère de l’emploi et des affaires sociales  </h3>
+                    <h4 (click)="openLink('www.emploi.gov.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>www.emploi.gov.ma</h4>
+                <hr>
+                </ion-item>
+                <ion-item>
+                    <h3 ion-text color="primary" class="line-break"><ion-icon name="home" color="secondary" item-left></ion-icon> Ministère chargé des marocains résidents à l’étranger et des affaires de la migration   </h3>
+                    <h4 (click)="openLink('www.marocainsdumonde.gov.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>www.marocainsdumonde.gov.ma</h4>
+                <hr>
+                </ion-item>
+                <ion-item>
+                    <h3 ion-text color="primary" ><ion-icon name="home" color="secondary" item-left></ion-icon><span ion-text class="line-break">Ministère de l’artisanat et de l’économie sociale et solidaire</span></h3>
+                    <h4 (click)="openLink('www.artisanat.gov.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>www.artisanat.gov.ma</h4>
+                <hr>
+                </ion-item>
+                
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
