@@ -30,6 +30,8 @@ import { ModalActeursPublicPage } from '../pages/infos/modals/marcheTravail/acte
 import { ModalSecteursRecrutePage } from '../pages/infos/modals/secteursMetiers/secteursRecrute';
 import { ModalMetiersPorteursPage } from '../pages/infos/modals/secteursMetiers/metiersPorteurs';
 import { ModalActeursInstitutionnelsPage } from '../pages/infos/modals/acteursInstitutionnels/acteursInsitutionnels';
+import { ModalAssociationsPage } from '../pages/infos/modals/acteursChamps/associations';
+import { ModalAssociationsSubPage } from '../pages/infos/modals/acteursChamps/associationsSub';
 
 import { PrestationModalServiceProvider } from '../providers/prestation-modal-service/prestation-modal-service';
 
@@ -37,6 +39,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+import { AssociationServiceProvider } from '../providers/association-service/association-service';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,9 @@ import { HttpModule } from '@angular/http';
     ModalActeursPublicPage,
     ModalSecteursRecrutePage,
     ModalMetiersPorteursPage,
-    ModalActeursInstitutionnelsPage
+    ModalActeursInstitutionnelsPage,
+    ModalAssociationsPage,
+    ModalAssociationsSubPage
   ],
   imports: [
     BrowserModule,
@@ -99,14 +104,17 @@ import { HttpModule } from '@angular/http';
     ModalActeursPublicPage,
     ModalSecteursRecrutePage,
     ModalMetiersPorteursPage,
-    ModalActeursInstitutionnelsPage
+    ModalActeursInstitutionnelsPage,
+    ModalAssociationsPage,
+    ModalAssociationsSubPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PrestationModalServiceProvider,
-    InAppBrowser
+    InAppBrowser,
+    AssociationServiceProvider
   ]
 })
 export class AppModule {}

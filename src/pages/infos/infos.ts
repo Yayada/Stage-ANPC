@@ -6,7 +6,8 @@ import { ModalActeursPublicPage } from './modals/marcheTravail/acteursPublic';
 import { ModalSecteursRecrutePage } from './modals/secteursMetiers/secteursRecrute';
 import { ModalMetiersPorteursPage } from './modals/secteursMetiers/metiersPorteurs';
 import { ModalActeursInstitutionnelsPage } from './modals/acteursInstitutionnels/acteursInsitutionnels';
-import { ModalAidePage } from './modals/aide/aide';
+import { ModalAssociationsPage } from './modals/acteursChamps/associations';
+import { ModalAssociationsSubPage } from './modals/acteursChamps/associationsSub';
 
 @Component({
   selector: 'page-infos',
@@ -41,6 +42,12 @@ export class InfosPage {
         modal.present();
         break;
       case 13: modal = this.modalCtrl.create(ModalActeursInstitutionnelsPage);
+        modal.present();
+        break;
+      case 21: modal = this.modalCtrl.create(ModalAssociationsPage);
+        modal.present();
+        break;
+      case 22: modal = this.modalCtrl.create(ModalAssociationsSubPage);
         modal.present();
         break;
     }    

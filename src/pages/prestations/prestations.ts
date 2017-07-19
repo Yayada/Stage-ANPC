@@ -3,14 +3,13 @@ import { NavController, ActionSheetController, Platform, } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
-import { PrestationModalServiceProvider } from '../../providers/prestation-modal-service/prestation-modal-service'; 3
+import { PrestationModalServiceProvider } from '../../providers/prestation-modal-service/prestation-modal-service';
 
 import { ModalPrestationAgencePage } from './modals/prestationsAgence/modalPrestationAgence';
 import { ModalPortailAnapecPage } from './modals/serviceDistance/portailAnapec';
 import { ModalInscriptionAnapecPage } from './modals/serviceDistance/inscriptionAnapec';
 import { ModalConseilsInfosPage } from './modals/serviceDistance/conseilsInfos';
 import { ModalEmailNewsLetterPage } from './modals/serviceDistance/emailNewsLetter';
-
 
 @Component({
   selector: 'page-prestations',
