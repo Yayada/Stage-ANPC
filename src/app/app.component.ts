@@ -22,21 +22,21 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, icon: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Prestations', component: PrestationsPage },
-      { title: 'Droit du travail', component: DroitDuTravailPage },
-      { title: 'Conseils', component: ConseilsPage },
-      { title: 'Infos', component: InfosPage },
-      { title: 'Formations', component: FormationsPage },
-      { title: 'Offres d\'emploi', component: OffresEmploiPage },
-      { title: 'Anapec', component: AnapecPage },
-      { title: 'Vidéos', component: VideosPage },
+      { title: 'Prestations', icon: "list-box", component: PrestationsPage },
+      { title: 'Droit du travail', icon: "filing", component: DroitDuTravailPage },
+      { title: 'Conseils', icon: "bulb", component: ConseilsPage },
+      { title: 'Infos', icon: "information-circle", component: InfosPage },
+      { title: 'Formations', icon: "clipboard", component: FormationsPage },
+      { title: 'Offres d\'emploi', icon: "briefcase", component: OffresEmploiPage },
+      { title: 'Anapec', icon: "", component: AnapecPage },
+      { title: 'Vidéos', icon: "videocam", component: VideosPage },
     ];
 
   }
