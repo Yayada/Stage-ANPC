@@ -32,6 +32,7 @@ import { ModalMetiersPorteursPage } from '../pages/infos/modals/secteursMetiers/
 import { ModalActeursInstitutionnelsPage } from '../pages/infos/modals/acteursInstitutionnels/acteursInsitutionnels';
 import { ModalAssociationsPage } from '../pages/infos/modals/acteursChamps/associations';
 import { ModalAssociationsSubPage } from '../pages/infos/modals/acteursChamps/associationsSub';
+import { ModalFormationPublicPage } from '../pages/formations/modals/modalFormationPublic';
 
 import { PrestationModalServiceProvider } from '../providers/prestation-modal-service/prestation-modal-service';
 
@@ -40,6 +41,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
 import { AssociationServiceProvider } from '../providers/association-service/association-service';
+import { FormationPublicModalProvider } from '../providers/formation-public-modal/formation-public-modal';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,8 @@ import { AssociationServiceProvider } from '../providers/association-service/ass
     ModalMetiersPorteursPage,
     ModalActeursInstitutionnelsPage,
     ModalAssociationsPage,
-    ModalAssociationsSubPage
+    ModalAssociationsSubPage,
+    ModalFormationPublicPage
   ],
   imports: [
     BrowserModule,
@@ -106,7 +109,8 @@ import { AssociationServiceProvider } from '../providers/association-service/ass
     ModalMetiersPorteursPage,
     ModalActeursInstitutionnelsPage,
     ModalAssociationsPage,
-    ModalAssociationsSubPage
+    ModalAssociationsSubPage,
+    ModalFormationPublicPage
   ],
   providers: [
     StatusBar,
@@ -114,7 +118,8 @@ import { AssociationServiceProvider } from '../providers/association-service/ass
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PrestationModalServiceProvider,
     InAppBrowser,
-    AssociationServiceProvider
+    AssociationServiceProvider,
+    FormationPublicModalProvider
   ]
 })
 export class AppModule {}

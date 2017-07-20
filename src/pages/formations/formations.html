@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,9 +7,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <div padding>
-    <ion-segment [(ngModel)]="formations">
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-segment [(ngModel)]="formations" color="white">
       <ion-segment-button value="trouverFormation">
         Où je peux trouver ma formation
       </ion-segment-button>
@@ -26,79 +26,195 @@
         Formations réalisées par les acteurs public
       </ion-segment-button>
     </ion-segment>
-  </div>
+  </ion-toolbar>
 
   <div [ngSwitch]="formations">
     <ion-list *ngSwitchCase="'trouverFormation'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2></h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2></h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Formation partenariale</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Formation à distance</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Formations réalisées par les acteurs public</h2>
-      </ion-item>
     </ion-list>
 
     <ion-list *ngSwitchCase="'formationQualifiante'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Portail Anapec</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>M'inscrire à l'Anapec</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Conseils et infos</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Email, sms , newsletter</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Réseaux Sociaux</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Téléphone</h2>
-      </ion-item>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="done-all" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary">Objectif</h4>
+        </ion-item>
+        <ion-card-content>
+          <ion-note color="note">Contribuer à l’amélioration de l’employabilité des chercheurs d’emploi, à travers des formations anticipant les
+            besoins potentiels en compétences.
+          </ion-note>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="contact" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Qui est concerné ?</h4>
+        </ion-item>
+        <ion-card-content>
+          <p class="line-break" ion-text>Bénéficient de cette formation, les chercheurs d’emploi, y compris les migrants régularisés dans la compagne extraordinaire:
+            <ion-list>
+              <ion-item>
+                <p class="line-break" color="note">Inscrits à l’ANAPEC</p>
+                <hr>
+              </ion-item>
+              <ion-item>
+                <p class="line-break" color="note">Titulaires d’un baccalauréat au moins ou diplômés de la formation professionnelle</p>
+                <hr>
+              </ion-item>
+              <ion-item>
+                <p class="line-break" color="note">Ayant besoin d’une réorientation vers des formations permettant de développer des compétences demandées par
+                  les Entreprises.</p>
+                <hr>
+              </ion-item>
+            </ion-list>
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="clock" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Durée</h4>
+        </ion-item>
+        <ion-card-content>
+          <p class="line-break" ion-text>Entre 03 et 06 mois</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="log-in" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Comment s'inscrire ?</h4>
+        </ion-item>
+        <ion-card-content>
+          <p class="line-break" ion-text>Pour vous inscrire à la FQR 2017, veuillez cliquer sur le lien suivant : <span ion-text color="primary" (click)="openLink('wwww.anapec-amrc.org/ceps/inscription')">http://anapec-amrc.org/ceps/inscription</span>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'formationPartenariale'">
+      <ion-card>
+        <ion-item>
+          <ion-icon name="done-all" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary">Objectif</h4>
+        </ion-item>
+        <ion-card-content>
+          <ion-note color="note">Des actions de formation sont organisées avec les différents partenaires afin d’améliorer l’employabilité des chercheurs
+            d’emploi et faciliter par la suite leurs insertion dans le marché de l’emploi.
+          </ion-note>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="contact" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Qui est concerné ?</h4>
+        </ion-item>
+        <ion-card-content>
+          <p class="line-break" ion-text>Tout chercheur d’emploi y compris les migrants en situation régulière.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="browsers" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Liens utiles</h4>
+        </ion-item>
+        <ion-card-content>
+          <p class="line-break" ion-text>
+            <ion-list>
+              <ion-item>
+                <p class="line-break" color="note"><span ion-text color="primary" (click)="openLink('www.ofppt.ma/index.php/offre-de-formation2/rechercher-un-etablissement')">http://www.ofppt.ma/index.php/offre-de-formation2/rechercher-un-etablissement</span></p>
+              </ion-item>
+              <ion-item>
+                <p class="line-break" color="note"><span ion-text color="primary" (click)="openLink('www.dfp.ac.ma/offre-de-formation/etablissements-prives.html')">http://www.dfp.ac.ma/offre-de-formation/etablissements-prives.html</span></p>
+              </ion-item>
+              <ion-item>
+                <p class="line-break" color="note"><span ion-text color="primary" (click)="openLink('www.enssup.gov.ma/index.php/etudiants/etablissements-de-formation')">http://www.enssup.gov.ma/index.php/etudiants/etablissements-de-formation</span></p>
+              </ion-item>
+            </ion-list>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'formationDistance'">
+      <ion-card>
+        <ion-item>
+          <ion-icon name="done-all" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary">Objectif</h4>
+        </ion-item>
+        <ion-card-content>
+          <p ion-text class="line-break">
+            <ion-list>
+              <ion-item>
+                <p class="line-break" color="note">L’accès à plus de 1074 cours (MOOC) dans diverses thématiques en ligne et gratuits.</p>
+              </ion-item>
+              <ion-item>
+                <p class="line-break" color="note">Développer des compétences d’avenir comme: le marketing digitale , la programmation informatique , la data
+                  science</p>
+              </ion-item>
+              <ion-item>
+                <p class="line-break" color="note">Obtenir des certifications à faire valoir auprès des employeurs</p>
+              </ion-item>
+            </ion-list>
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="contact" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Qui est concerné ?</h4>
+        </ion-item>
+        <ion-card-content>
+          <p class="line-break" ion-text>Tous les chercheurs d’emploi inscrits à l’ANAPEC y compris les migrants en situation régulière, bénéficient peuvent
+            désormais bénéficier gratuitement de l’offre de formation Premium Solo d’OpenClassrooms à partir d’un accès libre,
+            gratuit et illimité.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="log-in" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Comment s'y inscrire</h4>
+        </ion-item>
+        <ion-card-content>
+          <p class="line-break" ion-text>
+            <ion-list>
+              <ion-item>
+                <p class="line-break" color="note"><span ion-text color="primary" (click)="openLink('www.anapec.ma')">www.anapec.ma</span></p>
+              </ion-item>
+              <ion-item>
+                <p class="line-break" color="note"><span ion-text color="primary" (click)="openLink('www.openclassrooms.com/anapec/partenariat')">https://openclassrooms.com/anapec/partenariat</span></p>
+              </ion-item>
+              <ion-item>
+                <p class="line-break" color="note"><span ion-text color="primary" (click)="openLink('www.tv.anapec.org/OpenClassRooms')">http://tv.anapec.org/OpenClassRooms/</span></p>
+              </ion-item>
+            </ion-list>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'formationPublic'">
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(1)">
+            <h6 class="line-break" >OFPPT</h6>            
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+          </button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(2)">
+            <h6 class="line-break" >Entraide nationale</h6>            
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+          </button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(3)">
+            <h6 class="line-break" >ODCO</h6>            
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+          </button>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
   </div>
 </ion-content>
