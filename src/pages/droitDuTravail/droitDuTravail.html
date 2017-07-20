@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="light">
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-toolbar color="light">
+  <ion-toolbar color="primary">
     <ion-segment [(ngModel)]="droitTravail" color="white">
       <ion-segment-button value="legislationTravailleursEtrangers">
         Législation pour les travailleurs étrangers
@@ -33,7 +33,7 @@
           <ion-note color="note">
             Le code du travail marocain précise et encadre l’emploi des salariés étrangers. Pour plus d’information, consulter le chapitre
             V sur l’emploi des salariés étrangers,
-            <span ion-text color="primary">articles 516, 517,518 et 519 du code du travail marocain.</span> Pour télécharger
+            <span ion-text color="light">articles 516, 517,518 et 519 du code du travail marocain.</span> Pour télécharger
             le document « Code du travail », cliquer sur le lien suivant :
             <a href src="http://www.emploi.gov.ma/images/doc_travail/code_du_travail.pdf"></a>
           </ion-note>
@@ -46,7 +46,7 @@
         <ion-card-content>
           <button ion-item class="no-padding" (click)="showModalDetails(21)">
             <h6 class=" line-break">Migrants ayant bénéficié de la régularisation execptionnelle</h6>
-            <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>          
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
           </button>
         </ion-card-content>
       </ion-card>
@@ -54,7 +54,7 @@
         <ion-card-content>
           <button ion-item class="no-padding" (click)="showModalDetails(22)">
             <h6 class=" line-break">Autres migrants en situation régulière</h6>
-            <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>          
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
           </button>
         </ion-card-content>
       </ion-card>
@@ -65,7 +65,7 @@
         <ion-card-content>
           <button ion-item class="no-padding" (click)="showModalDetails(31)">
             <h6 class="line-break" >Contrat de travail pour étranger</h6>            
-            <ion-icon name="arrow-forward" item-end color="primary"></ion-icon>
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
           </button>
         </ion-card-content>
       </ion-card>
@@ -73,7 +73,7 @@
         <ion-card-content>
           <button ion-item class="no-padding" (click)="showModalDetails(32)">
             <h6 class=" line-break">Contrat d'insertion</h6>            
-            <ion-icon name="arrow-forward" item-end color="primary" ></ion-icon>                      
+            <ion-icon name="arrow-forward" item-end color="secondary" ></ion-icon>                      
           </button>
         </ion-card-content>
       </ion-card>

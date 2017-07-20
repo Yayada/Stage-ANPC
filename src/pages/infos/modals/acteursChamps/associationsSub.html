@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar color="light">
         <ion-title>
-            Description
+            Associations subventionnées
         </ion-title>
         <ion-buttons start>
             <button ion-button (click)="dismiss()">
@@ -46,8 +46,11 @@
                     <p class="line-break">
                         <ion-icon name="mail" color="secondary" item-left></ion-icon>{{assoc.mail}}</p>
                     <p class="line-break">
-                        <ion-icon name="clipboard" color="secondary" item-left></ion-icon>{{assoc.projet}}</p>
+                        <ion-icon name="clipboard" color="secondary" item-left></ion-icon>Projet : {{assoc.projet}}</p>
                     <p class="line-break">
+                        <ion-icon name="list-box" color="secondary" item-left></ion-icon>
+                        Composantes : 
+
                         <ion-list inset>
                             <ion-item *ngFor="let cmp of assoc.composants" class="line-break">
                                 <p ion-text class="line-break" color="note">{{cmp}} </p>

@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar color="light">
         <ion-title>
-            Description
+            {{content.content.title}}
         </ion-title>
         <ion-buttons start>
             <button ion-button (click)="dismiss()">
@@ -13,7 +13,7 @@
 </ion-header>
 
 <ion-content>
-    <div padding>
+    <div>
         <ion-card>
             <ion-item>
                 <ion-icon name="people" color="primary" item-left></ion-icon>
@@ -34,7 +34,7 @@
         </ion-card>
         <ion-card *ngIf="content.content.duree">
             <ion-item>
-                <ion-icon name="pin" color="primary" item-left></ion-icon>
+                <ion-icon name="clock" color="primary" item-left></ion-icon>
                 <h4 ion-text color="secondary">Durée</h4>
             </ion-item>
             <ion-card-content>
@@ -50,6 +50,7 @@
                 <ion-list>
                     <ion-item *ngFor="let obj of content.content.objectifs">
                         <p class="line-break" color="note">{{obj}}</p>
+                        <hr>
                     </ion-item>
                 </ion-list>
             </ion-card-content>
@@ -63,6 +64,7 @@
                 <ion-list>
                     <ion-item *ngFor="let obj of content.content.prestationsPorteur">
                         <p class="line-break" color="note">{{obj}}</p>
+                        <hr>
                     </ion-item>
                 </ion-list>
             </ion-card-content>
@@ -76,6 +78,7 @@
                 <ion-list>
                     <ion-item *ngFor="let obj of content.content.prestations">
                         <p class="line-break" color="note">{{obj}}</p>
+                        <hr>
                     </ion-item>
                 </ion-list>
             </ion-card-content>
