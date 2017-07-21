@@ -4,7 +4,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { ModalFormationPublicPage } from './modals/modalFormationPublic';
 
-import { FormationPublicModalProvider } from '../../providers/formation-public-modal/formation-public-modal';
+import { FormationProvider } from '../../providers/formation-service/formation-service';
 
 @Component({
   selector: 'page-formations',
@@ -14,11 +14,16 @@ export class FormationsPage {
 
   formations: String = "trouverFormation";
   modalContents: Array<{ index: number, content: {} }> = [];
+  locations: Array<{}>;
 
-  constructor(public navCtrl: NavController, public modalService: FormationPublicModalProvider, public modalCtrl: ModalController, public iab: InAppBrowser) {
+  constructor(public navCtrl: NavController, public formationService: FormationProvider, public modalCtrl: ModalController, public iab: InAppBrowser) {
 
-    this.modalService.getContent().subscribe(response => {
+    this.formationService.getFormationPublicContent().subscribe(response => {
       this.modalContents = response;
+    });
+
+    this.formationService.getFormationLocationContent().subscribe(response => {
+      this.locations = response;
     });
   }
 
@@ -30,6 +35,7 @@ export class FormationsPage {
         modal.present();
       }
     }
+
   }
 
   openLink(link: string) {

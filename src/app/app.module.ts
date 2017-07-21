@@ -34,14 +34,15 @@ import { ModalAssociationsPage } from '../pages/infos/modals/acteursChamps/assoc
 import { ModalAssociationsSubPage } from '../pages/infos/modals/acteursChamps/associationsSub';
 import { ModalFormationPublicPage } from '../pages/formations/modals/modalFormationPublic';
 
-import { PrestationModalServiceProvider } from '../providers/prestation-modal-service/prestation-modal-service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+
+import { PrestationModalServiceProvider } from '../providers/prestation-modal-service/prestation-modal-service';
 import { AssociationServiceProvider } from '../providers/association-service/association-service';
-import { FormationPublicModalProvider } from '../providers/formation-public-modal/formation-public-modal';
+import { FormationProvider } from '../providers/formation-service/formation-service';
 
 @NgModule({
   declarations: [
@@ -119,7 +120,7 @@ import { FormationPublicModalProvider } from '../providers/formation-public-moda
     PrestationModalServiceProvider,
     InAppBrowser,
     AssociationServiceProvider,
-    FormationPublicModalProvider
+    FormationProvider
   ]
 })
 export class AppModule {}

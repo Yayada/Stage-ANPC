@@ -37,6 +37,7 @@ export class MyApp {
       { title: 'Offres d\'emploi', icon: "briefcase", component: OffresEmploiPage },
       { title: 'Anapec', icon: "", component: AnapecPage },
       { title: 'Vidéos', icon: "videocam", component: VideosPage },
+      { title: 'FAQ', icon: "help", component: VideosPage },
     ];
 
   }

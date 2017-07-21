@@ -30,6 +30,15 @@
 
   <div [ngSwitch]="formations">
     <ion-list *ngSwitchCase="'trouverFormation'">
+      <ion-list inset>
+        <ion-item *ngFor="let location of  locations">
+          <h2 ion-text color="note" class="line-break">
+            <ion-icon name="home" color="secondary" item-left></ion-icon><b>{{location.region}}</b> </h2>
+          <p class="line-break" *ngFor="let ville of  location.villes" ion-text (click)="openLink('www.anapec.org/conseils/filiere.php?agence='+ ville.link)">
+            <ion-icon name="pin" color="secondary" item-left></ion-icon><span ion-text color="primary">{{ville.name}}</span>
+          </p>
+        </ion-item>
+      </ion-list>
     </ion-list>
 
     <ion-list *ngSwitchCase="'formationQualifiante'">
@@ -147,7 +156,8 @@
               </ion-item>
               <ion-item>
                 <p class="line-break" color="note">Développer des compétences d’avenir comme: le marketing digitale , la programmation informatique , la data
-                  science</p>
+                  science
+                </p>
               </ion-item>
               <ion-item>
                 <p class="line-break" color="note">Obtenir des certifications à faire valoir auprès des employeurs</p>

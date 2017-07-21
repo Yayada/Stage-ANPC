@@ -9,14 +9,17 @@ import 'rxjs/add/operator/map';
   for more info on providers and Angular DI.
 */
 @Injectable()
-export class FormationPublicModalProvider {
+export class FormationProvider {
 
   constructor(public http: Http) {
   }
 
-  getContent() {
-
+  getFormationPublicContent() {
     return this.http.get("assets/data/formationPublicModalContent.json").map(res => res.json());
+  }
+
+  getFormationLocationContent() {
+    return this.http.get("assets/data/formationLocationModalContent.json").map(res => res.json());
   }
 
 }
