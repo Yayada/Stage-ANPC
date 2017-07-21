@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,5 +7,119 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-segment [(ngModel)]="offres" color="white">
+      <ion-segment-button value="offresAnapec">
+        Offres de l'emploi de l'Anapec
+      </ion-segment-button>
+      <ion-segment-button value="siteRecherche">
+        Sites de recherche d'emploi
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <div [ngSwitch]="offres">
+    <ion-list *ngSwitchCase="'offresAnapec'">
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="openLink('play.google.com/store/apps/details?id=org.anapec.myanapec')">
+            <h6 class=" line-break">Visualiser les offres d'emploi sur ANAPEC mobile</h6>
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
+          </button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="openLink(' www.anapec.org/mobile/login.html')">
+            <h6 class=" line-break">Visualiser les offres d'emploi sur le site Anapec</h6>
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
+          </button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'siteRecherche'">
+      <ion-card>
+        <ion-item>
+          <ion-icon name="desktop" color="primary" item-left></ion-icon>
+          <p class="line-break" ion-text color="secondary">Sites dédiés au secteur privé et public.
+          </p>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="briefcase" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Offres d'emploi dans le secteur privé</h4>
+        </ion-item>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <p class="line-break" ion-text color="note">La presse nationale.</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="note">Les cabinets d'intérims et de recrutement</p>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="browsers" color="primary" item-left></ion-icon>
+          <h4 ion-text color="secondary" class="line-break">Les sites d'emploi</h4>
+        </ion-item>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <p class="line-break" ion-text ion-text color="primary" (click)="openLink('www.offres-emploi.ma/maroc')">http://www.offres-emploi.ma/maroc.</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.rekrute.com')">http://www.rekrute.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.amaljob.com')">http://www.amaljob.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.manpower-maroc.com')">http://www.manpower-maroc.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.crit-job.com')">http://www.crit-job.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.emploi-maroc.com')">http://www.emploi-maroc.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.emploi.ma')">http://www.emploi.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.marocemploi.net')">http://www.marocemploi.net</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.diorh.com')">http://www.diorh.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.bilconsulting.com')">http://www.bilconsulting.com</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.tectra.ma')">http://www.tectra.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.jobrapido.ma')">http://www.jobrapido.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.optioncarriere.ma')">http://www.optioncarriere.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.rhperformance.net')">http://www.rhperformance.net</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.menara.ma')">http://www.menara.ma</p>
+            </ion-item>
+            <ion-item>
+              <p class="line-break" ion-text color="primary" (click)="openLink('www.lematinemploi.com')">http://www.lematinemploi.com</p>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
 </ion-content>

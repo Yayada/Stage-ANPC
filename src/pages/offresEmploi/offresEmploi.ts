@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @Component({
   selector: 'page-offresEmploi',
@@ -7,8 +8,14 @@ import { NavController } from 'ionic-angular';
 })
 export class OffresEmploiPage {
 
-  constructor(public navCtrl: NavController) {
+  offres: string = "offresAnapec";
 
+  constructor(public navCtrl: NavController, public iab: InAppBrowser) {
+
+  }
+
+  openLink(link: string) {
+    this.iab.create("http://" + link);
   }
 
 }
