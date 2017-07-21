@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-anapec',
-  templateUrl: 'anapec.html'
+  selector: 'page-faq',
+  templateUrl: 'faq.html'
 })
-export class AnapecPage {
+export class FaqPage {
 
-  anapec : string = "anapec";
+  faq : string = "eligibilite";
   constructor(public navCtrl: NavController) {
 
   }

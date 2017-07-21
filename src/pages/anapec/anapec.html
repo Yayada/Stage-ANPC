@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,5 +7,32 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-segment [(ngModel)]="anapec" color="white">
+      <ion-segment-button value="anapec">
+        C'est quoi l'Anapec
+      </ion-segment-button>
+      <ion-segment-button value="videos">
+        Vidèos
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <div [ngSwitch]="anapec">
+    <ion-list *ngSwitchCase="'anapec'">
+      <ion-card>
+        <ion-card-title color="secondary" padding>
+          L'Agence Nationale de Promotion de l'Emploi et des Compétences (ANAPEC)
+        </ion-card-title>
+        <ion-card-content>
+          est un établissement public doté de la personnalité morale et de l'autonomie financière, chargé de l’intermédiation entre
+          les employeurs et les chercheurs d’emploi et de la promotion de l’auto emploi au Maroc. L’Anapec est un acteur
+          majeur de l’insertion professionnelle des chercheurs d’emploi au Maroc. Elle est ouverte depuis 2015 aux migrants
+          régularisés dans le cadre de la campagne extraordinaire de 2014.
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+    <ion-list *ngSwitchCase="'videos'">
+    </ion-list>
+  </div>
 </ion-content>

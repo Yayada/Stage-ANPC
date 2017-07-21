@@ -12,6 +12,7 @@ import { OffresEmploiPage } from '../pages/offresEmploi/offresEmploi';
 import { AnapecPage } from '../pages/anapec/anapec';
 import { VideosPage } from '../pages/videos/videos';
 import { PrestationsPage } from '../pages/prestations/prestations';
+import { FaqPage } from '../pages/faq/faq';
 
 
 @Component({
@@ -37,7 +38,7 @@ export class MyApp {
       { title: 'Offres d\'emploi', icon: "briefcase", component: OffresEmploiPage },
       { title: 'Anapec', icon: "", component: AnapecPage },
       { title: 'Vidéos', icon: "videocam", component: VideosPage },
-      { title: 'FAQ', icon: "help", component: VideosPage },
+      { title: 'FAQ', icon: "help", component: FaqPage },
     ];
 
   }

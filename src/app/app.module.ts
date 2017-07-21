@@ -14,6 +14,7 @@ import { FormationsPage } from '../pages/formations/formations';
 import { OffresEmploiPage } from '../pages/offresEmploi/offresEmploi';
 import { AnapecPage } from '../pages/anapec/anapec';
 import { VideosPage } from '../pages/videos/videos';
+import { FaqPage } from '../pages/faq/faq';
 
 import { ModalPrestationAgencePage } from '../pages/prestations/modals/prestationsAgence/modalPrestationAgence';
 import { ModalPortailAnapecPage } from '../pages/prestations/modals/serviceDistance/portailAnapec';
@@ -57,6 +58,7 @@ import { FormationProvider } from '../providers/formation-service/formation-serv
     OffresEmploiPage,
     AnapecPage,
     VideosPage,
+    FaqPage,
     ModalPrestationAgencePage,
     ModalPortailAnapecPage,
     ModalInscriptionAnapecPage,
@@ -94,6 +96,7 @@ import { FormationProvider } from '../providers/formation-service/formation-serv
     OffresEmploiPage,
     AnapecPage,
     VideosPage,
+    FaqPage,
     ModalPrestationAgencePage,
     ModalPortailAnapecPage,
     ModalInscriptionAnapecPage,

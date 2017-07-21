@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>FAQ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar color="primary">
+    <ion-segment [(ngModel)]="faq" color="white">
+      <ion-segment-button value="eligiblite">
+        Eligibilité
+      </ion-segment-button>
+      <ion-segment-button value="offreServices">
+        Offre de services
+      </ion-segment-button>
+      <ion-segment-button value="procedureRecrutement">
+        Procédure de recrutement
+      </ion-segment-button>
+      <ion-segment-button value="traitementOffres">
+        Traitement des offres
+      </ion-segment-button>
+      <ion-segment-button value="abreviations">
+        Abréviations
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <div [ngSwitch]="anapec">
+    <ion-list *ngSwitchCase="'eligiblite'">
+    </ion-list>
+    <ion-list *ngSwitchCase="'offreServices'">
+    </ion-list>
+    <ion-list *ngSwitchCase="'procedureRecrutement'">
+    </ion-list>
+    <ion-list *ngSwitchCase="'traitementOffres'">
+    </ion-list>
+    <ion-list *ngSwitchCase="'abreviations'">
+    </ion-list>
+  </div>
+</ion-content>
