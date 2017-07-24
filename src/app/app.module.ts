@@ -35,7 +35,6 @@ import { ModalAssociationsPage } from '../pages/infos/modals/acteursChamps/assoc
 import { ModalAssociationsSubPage } from '../pages/infos/modals/acteursChamps/associationsSub';
 import { ModalFormationPublicPage } from '../pages/formations/modals/modalFormationPublic';
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -44,6 +43,8 @@ import { HttpModule } from '@angular/http';
 import { PrestationModalServiceProvider } from '../providers/prestation-modal-service/prestation-modal-service';
 import { AssociationServiceProvider } from '../providers/association-service/association-service';
 import { FormationProvider } from '../providers/formation-service/formation-service';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { VideosServiceProvider } from '../providers/videos-service/videos-service';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,7 @@ import { FormationProvider } from '../providers/formation-service/formation-serv
     ModalActeursInstitutionnelsPage,
     ModalAssociationsPage,
     ModalAssociationsSubPage,
-    ModalFormationPublicPage
+    ModalFormationPublicPage,
   ],
   imports: [
     BrowserModule,
@@ -123,7 +124,9 @@ import { FormationProvider } from '../providers/formation-service/formation-serv
     PrestationModalServiceProvider,
     InAppBrowser,
     AssociationServiceProvider,
-    FormationProvider
+    FormationProvider,
+    YoutubeVideoPlayer,
+    VideosServiceProvider
   ]
 })
 export class AppModule {}
