@@ -34,6 +34,7 @@ import { ModalActeursInstitutionnelsPage } from '../pages/infos/modals/acteursIn
 import { ModalAssociationsPage } from '../pages/infos/modals/acteursChamps/associations';
 import { ModalAssociationsSubPage } from '../pages/infos/modals/acteursChamps/associationsSub';
 import { ModalFormationPublicPage } from '../pages/formations/modals/modalFormationPublic';
+import { ModalFaqContentPage } from '../pages/faq/modals/faqContentModal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
@@ -45,6 +46,7 @@ import { AssociationServiceProvider } from '../providers/association-service/ass
 import { FormationProvider } from '../providers/formation-service/formation-service';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { VideosServiceProvider } from '../providers/videos-service/videos-service';
+import { FaqServiceProvider } from '../providers/faq-service/faq-service';
 
 @NgModule({
   declarations: [
@@ -78,6 +80,7 @@ import { VideosServiceProvider } from '../providers/videos-service/videos-servic
     ModalAssociationsPage,
     ModalAssociationsSubPage,
     ModalFormationPublicPage,
+    ModalFaqContentPage
   ],
   imports: [
     BrowserModule,
@@ -115,7 +118,8 @@ import { VideosServiceProvider } from '../providers/videos-service/videos-servic
     ModalActeursInstitutionnelsPage,
     ModalAssociationsPage,
     ModalAssociationsSubPage,
-    ModalFormationPublicPage
+    ModalFormationPublicPage,
+    ModalFaqContentPage
   ],
   providers: [
     StatusBar,
@@ -126,7 +130,8 @@ import { VideosServiceProvider } from '../providers/videos-service/videos-servic
     AssociationServiceProvider,
     FormationProvider,
     YoutubeVideoPlayer,
-    VideosServiceProvider
+    VideosServiceProvider,
+    FaqServiceProvider
   ]
 })
 export class AppModule {}

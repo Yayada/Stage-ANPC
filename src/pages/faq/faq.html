@@ -10,7 +10,7 @@
 <ion-content>
   <ion-toolbar color="primary">
     <ion-segment [(ngModel)]="faq" color="white">
-      <ion-segment-button value="eligiblite" >
+      <ion-segment-button value="eligibilite">
         Eligibilité
       </ion-segment-button>
       <ion-segment-button value="offreServices" class="line-break" style="line-height: 1.5rem; padding-top : 2px; height : 5rem; text-align: center;">
@@ -27,16 +27,273 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
-  <div [ngSwitch]="anapec">
-    <ion-list *ngSwitchCase="'eligiblite'">
+  <div [ngSwitch]="faq">
+    <ion-list *ngSwitchCase="'eligibilite'">
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Cible</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(111)">
+              <p class="line-break">Qu’est ce qu’un migrant en situation régulière  ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Inscription</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(121)">
+              <p class="line-break">Qui est éligible à l’inscription sur SIGEC ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(122)">
+              <p class="line-break">Quels documents les migrants régularisés doivent-ils fournir pour valider leur inscription lors de l'entretien de positionnement à l'ANAPEC ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(123)">
+              <p class="line-break">Un migrant régularisé a-t-il droit à une attestation d’inscription à l’ANAPEC ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(124)">
+              <p class="line-break">Quel âge, un migrant régularisé doit-il avoir pour bénéficier des prestations de l'ANAPEC ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Bénéfice des Prestations</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(131)">
+              <p class="line-break">Un migrant régularisé en cours de renouvellement de sa carte de séjour peut-il bénéficier des prestations de l'ANAPEC ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(132)">
+              <p class="line-break">Les migrants régularisés peuvent-ils bénéficier des mêmes prestations que les nationaux ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Bénefice des Mesures pour l'emploi</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(141)">
+              <p class="line-break">Est ce que les migrants régularisés bénéficient des mesures pour l'emploi?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Offre d'emploi nationale et à l'internationale</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(151)">
+              <p class="line-break">Est-ce qu'un migrant régularisé diplômé peut bénéficier du contrat d'insertion ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(152)">
+              <p class="line-break">Les migrants régularisés peuvent-ils postuler aux offres d'emploi à l'international et déposer leurs dossiers de candidatures?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
     <ion-list *ngSwitchCase="'offreServices'">
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Acceuil / Information</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(211)">
+              <p class="line-break">Comment s'informer sur l'Offre de Services de l'ANAPEC ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(212)">
+              <p class="line-break">Dans les Agences Anapec, Quels informations et services sont disponibles pour les migrants régularisés en libre accès ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(213)">
+              <p class="line-break">Dans les Agences Anapec, quels services et/ ou prestations sont délivés aux migrants régularisés?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Formation</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(221)">
+              <p class="line-break">Quelles sont les formations proposées par l'ANAPEC en faveur des migrants régularisés ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(222)">
+              <p class="line-break">Quelles sont les conditions à remplir pour bénéficier d'une formation dans le cadre du programme TAEHIL ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Aide spécifique au migrant</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(231)">
+              <p class="line-break">Comment un migrant peut connaitre les offre d'emploi de l'Anapec ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(232)">
+              <p class="line-break">Comment peut-on s'informer sur la procédure d'embauche des migrants régularisés au Maroc ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+            <button ion-item class="no-padding" (click)="showModalDetails(233)">
+              <p class="line-break">Est ce que l'Anapec finance le transport pour se rendre à un entretien d’embauche ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="no-padding">
+            <h6 class="line-break">Auto-emploi</h6>
+          </ion-item>
+          <ion-list inset>
+            <button ion-item class="no-padding" (click)="showModalDetails(231)">
+              <p class="line-break">Quelle est l'offre de services en matière d'auto-emploi ?</p>                
+              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            </button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
     <ion-list *ngSwitchCase="'procedureRecrutement'">
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(311)">
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            <h6 class="line-break">Est-ce qu’un migrant régularisé inscrit à l’ANAPEC doit suivre la procédure de recrutement des étrangers au Maroc ?</h6>
+          </button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(321)">
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            <h6 class="line-break">Les migrants régularisés ont-ils le droit de postuler aux offres d'emploi ?</h6>
+          </button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(331)">
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            <h6 class="line-break"> Quelle est la durée du contrat CDD ?</h6>
+          </button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(341)">
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            <h6 class="line-break"> Quel est le modèle de contrat à utiliser ?</h6>
+          </button>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
     <ion-list *ngSwitchCase="'traitementOffres'">
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(411)">
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            <h6 class="line-break">Est-ce que la candidature d'un migrant régularisé peut-être transmise par le conseiller en emploi à un employeur à l'occasion d'une offre d'emploi ?</h6>
+          </button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(421)">
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            <h6 class="line-break">Est-ce qu'un employeur peut exiger de ne recevoir que des candidatures de  chercheurs d'emploi d'origine marocaine ?</h6>
+          </button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <button ion-item class="no-padding" (click)="showModalDetails(431)">
+            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
+            <h6 class="line-break">Est-ce  qu'un  migrant régularisé doit valider son inscription auprès d'un conseiller en emploi avant de postuler à une offre d'emploi ?</h6>
+          </button>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
     <ion-list *ngSwitchCase="'abreviations'">
+      <ion-item>
+        <h2 ion-text color="secondary">OFPPT</h2>
+        <p ion-text class="line-break">Office de la formation professionnelle et de la promotion du travail</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">OE</h2>
+        <p ion-text class="line-break">Opérateur économique</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">OF</h2>
+        <p ion-text class="line-break">Opérateur de formation</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">OS</h2>
+        <p ion-text class="line-break">Offre de services</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">PCS</h2>
+        <p ion-text class="line-break">Prise en charge par l’Etat de la sécurité sociale</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">SI</h2>
+        <p ion-text class="line-break">Système d'informations</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">SMS</h2>
+        <p ion-text class="line-break">Short Message System</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">SEM</h2>
+        <p ion-text class="line-break">Service de l’emploi des migrants</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">SPE</h2>
+        <p ion-text class="line-break">Services publics de l’emploi</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">TPE</h2>
+        <p ion-text class="line-break">Très petite entreprise</p>
+      </ion-item>
+      <ion-item>
+        <h2 ion-text color="secondary">TFP</h2>
+        <p ion-text class="line-break">Taxe sur la formation professionnelle</p>
+      </ion-item>
     </ion-list>
   </div>
 </ion-content>

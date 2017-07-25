@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-title>
+            FAQ
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+        <span ion-text color="white" showWhen="ios">Annuler</span>
+        <ion-icon color="white" name="md-close" showWhen="android,windows"></ion-icon>     
+      </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-card>
+            <ion-item>
+                <ion-icon name="help" color="primary" item-left></ion-icon>
+                <h4 ion-text color="secondary" class="line-break">{{content.title}}</h4>
+            </ion-item>
+            <ion-card-content>
+                <ion-note color="note" ion-text [innerHTML] = "content.reponse"></ion-note>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>
