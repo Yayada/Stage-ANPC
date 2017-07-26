@@ -36,7 +36,7 @@ export class MyApp {
       { title: 'Infos', icon: "information-circle", component: InfosPage },
       { title: 'Formations', icon: "clipboard", component: FormationsPage },
       { title: 'Offres d\'emploi', icon: "briefcase", component: OffresEmploiPage },
-      { title: 'Anapec', icon: "", component: AnapecPage },
+      { title: 'Anapec', icon: "icon-anapec", component: AnapecPage },
       { title: 'Vidéos', icon: "videocam", component: VideosPage },
       { title: 'FAQ', icon: "help", component: FaqPage },
     ];
