@@ -8,12 +8,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="primary" no-border class="scrollable-segments">
     <ion-segment [(ngModel)]="infos" color="white">
       <ion-segment-button value="marcheTravail">
         Marché du travail
       </ion-segment-button>
-      <ion-segment-button value="acteurs" class="line-break" style="line-height: 1.5rem; padding-top : 4px; ">
+      <ion-segment-button value="acteurs" >
         Acteurs du champ de la migration
       </ion-segment-button>
       <ion-segment-button value="aide">

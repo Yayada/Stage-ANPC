@@ -8,22 +8,23 @@
 </ion-header>
 
 <ion-content>
-  <ion-toolbar color="primary">
-    <ion-segment [(ngModel)]="droitTravail" color="white" >
-      <ion-segment-button value="legislationTravailleursEtrangers" class="line-break" style="line-height: 1.5rem; padding-top : 2px; height : 5rem; text-align: center;">
+  <ion-toolbar color="primary" no-border class="scrollable-segments">
+    <ion-segment [(ngModel)]="droitTravail" color="white">
+      <ion-segment-button value="Législation pour les travailleurs étrangers">
         Législation pour les travailleurs étrangers
       </ion-segment-button>
-      <ion-segment-button value="proceduresRecrutement" class="line-break" style="line-height: 1.5rem; padding-top : 2px; ">
-        Procédure de recrutement
+      <ion-segment-button  value="Procédure de recrutement">
+        Procédure de recrutement 
       </ion-segment-button>
-      <ion-segment-button value="formesContrat" class="line-break" style="line-height: 1.5rem; padding-top : 2px; ">
+      <ion-segment-button value="Différentes formes de contrat" >
         Différentes formes de contrat
       </ion-segment-button>
+      
     </ion-segment>
   </ion-toolbar>
 
   <div [ngSwitch]="droitTravail">
-    <ion-list *ngSwitchCase="'legislationTravailleursEtrangers'">
+    <ion-list *ngSwitchCase="'Législation pour les travailleurs étrangers'"  >
       <ion-card>
         <ion-item>
           <ion-icon name="filing" color="primary" item-left></ion-icon>
@@ -41,7 +42,7 @@
       </ion-card>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'proceduresRecrutement'">
+    <ion-list *ngSwitchCase="'Procédure de recrutement'">
       <ion-card>
         <ion-card-content>
           <button ion-item class="no-padding" (click)="showModalDetails(21)">
@@ -60,7 +61,7 @@
       </ion-card>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'formesContrat'">
+    <ion-list *ngSwitchCase="'Différentes formes de contrat'">
       <ion-card>
         <ion-card-content>
           <button ion-item class="no-padding" (click)="showModalDetails(31)">

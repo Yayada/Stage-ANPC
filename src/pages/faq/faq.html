@@ -8,21 +8,21 @@
 </ion-header>
 
 <ion-content>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="primary" no-border class="scrollable-segments">
     <ion-segment [(ngModel)]="faq" color="white">
       <ion-segment-button value="eligibilite">
         Eligibilité
       </ion-segment-button>
-      <ion-segment-button value="offreServices" class="line-break" style="line-height: 1.5rem; padding-top : 2px; height : 5rem; text-align: center;">
+      <ion-segment-button value="offreServices">
         Offre de services
       </ion-segment-button>
-      <ion-segment-button value="procedureRecrutement" class="line-break" style="line-height: 1.5rem; padding-top : 2px; height : 5rem; text-align: center;">
+      <ion-segment-button value="procedureRecrutement">
         Procédure de recrutement
       </ion-segment-button>
-      <ion-segment-button value="traitementOffres" class="line-break" style="font-size: 1.1rem; line-height: 1.5rem; padding-top : 2px; height : 5rem; text-align: center;">
+      <ion-segment-button value="traitementOffres">
         Traitement des offres
       </ion-segment-button>
-      <ion-segment-button value="abreviations" class="line-break" style="font-size: 0.9rem; line-height: 1.5rem; padding-top : 4px; height : 5rem;">
+      <ion-segment-button value="abreviations">
         Abréviations
       </ion-segment-button>
     </ion-segment>

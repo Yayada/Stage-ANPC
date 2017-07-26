@@ -8,9 +8,12 @@
 </ion-header>
 
 <ion-content>
-      <ion-card *ngFor="let video of videos">
-        <ion-card-header (click)="open(video.link)" ion-text color="primary">
-          {{video.title}}
-        </ion-card-header>
-      </ion-card>
+  <ion-card *ngFor="let video of videos" (click)="open(video.link)" >
+    <div>
+      <img src="{{video.imageLink}}" />
+    </div>
+    <ion-card-header ion-text color="secondary" style="text-align: center;">
+       {{video.title}}
+    </ion-card-header>
+  </ion-card>
 </ion-content>

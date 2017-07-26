@@ -19,12 +19,16 @@
     white-space : normal;
 }
 
-.no-padding {
-    padding: 0px !important;
-}
 
-.segment-button-multiple-lines{
-    line-height: 1.5rem;
-    padding-top : 2px;
-    height : 5rem;
+
+ion-toolbar.scrollable-segments { 
+      ion-segment { 
+        display: block;
+        overflow-x: scroll;
+        white-space: nowrap;
+        ion-segment-button.segment-button {
+            display: inline-block;
+            width: auto;
+        }
+    }
 }

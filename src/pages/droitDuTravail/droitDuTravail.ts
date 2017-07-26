@@ -11,9 +11,9 @@ import { ModalMigrantsBeneficiantsPage } from './modals/procedureRecrutement/mig
 })
 export class DroitDuTravailPage {
 
-  droitTravail: String = "legislationTravailleursEtrangers";
+  droitTravail: String = "Législation pour les travailleurs étrangers";
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, private  modalCtrl: ModalController) {
 
   }
 
@@ -36,5 +36,7 @@ export class DroitDuTravailPage {
         break;
     }    
   }
+
+
 
 }
