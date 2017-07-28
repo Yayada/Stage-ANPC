@@ -32,3 +32,20 @@ ion-toolbar.scrollable-segments {
         }
     }
 }
+
+ion-list.scrollable-segments { 
+      ion-segment { 
+        display: block;
+        overflow-x: scroll;
+        white-space: nowrap;
+        ion-segment-button.segment-button {
+            display: inline-block;
+            width: auto;
+        }
+    }
+}
+
+div.swiper-pagination {
+   top:10px;
+   bottom:inherit;
+}

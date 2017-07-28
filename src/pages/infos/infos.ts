@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController , ModalController } from 'ionic-angular';
+
+
 import { ModalSitesRecrutementPage } from './modals/marcheTravail/sitesRecrutement';
 import { ModalCentreRegionauxPage } from './modals/marcheTravail/centreRegionaux';
 import { ModalActeursPublicPage } from './modals/marcheTravail/acteursPublic';

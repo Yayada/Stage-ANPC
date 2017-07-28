@@ -21,7 +21,7 @@ import { FaqPage } from '../pages/faq/faq';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = AnapecPage;
 
   pages: Array<{ title: string, icon: string, component: any }>;
 

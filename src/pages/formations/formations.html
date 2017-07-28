@@ -201,30 +201,31 @@
       </ion-card>
     </ion-list>
     <ion-list *ngSwitchCase="'formationPublic'">
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetails(1)">
-            <h6 class="line-break" >OFPPT</h6>            
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetails(2)">
-            <h6 class="line-break" >Entraide nationale</h6>            
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetails(3)">
-            <h6 class="line-break" >ODCO</h6>            
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
-          </button>
-        </ion-card-content>
-      </ion-card>
+      <ion-segment [(ngModel)]="formationPublicRubriques" color="primary">
+        <ion-segment-button value="OFPPT">
+          OFPPT
+        </ion-segment-button>
+        <ion-segment-button value="Entraide nationale">
+          Entraide nationale
+        </ion-segment-button>
+        <ion-segment-button value="ODCO">
+          ODCO
+        </ion-segment-button>
+      </ion-segment>
+      <div [ngSwitch]="formationPublicRubriques">
+        <ion-list no-padding *ngSwitchCase="'OFPPT'" inset>
+          <page-modal-ofppt>
+          </page-modal-ofppt>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'Entraide nationale'" inset>
+          <page-modal-entraide>
+          </page-modal-entraide>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'ODCO'" inset>
+          <page-modal-odco>
+          </page-modal-odco>
+        </ion-list>
+      </div>
     </ion-list>
   </div>
 </ion-content>

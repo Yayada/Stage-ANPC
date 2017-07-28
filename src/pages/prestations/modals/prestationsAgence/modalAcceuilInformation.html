@@ -1,20 +1,4 @@
-<ion-header>
-    <ion-toolbar color="light">
-        <ion-title>
-            {{content.content.title}}
-        </ion-title>
-        <ion-buttons start>
-            <button ion-button (click)="dismiss()">
-        <span ion-text color="white" showWhen="ios">Annuler</span>
-        <ion-icon color="white" name="md-close" showWhen="android,windows"></ion-icon>     
-      </button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
-
-<ion-content>
-    <div>
-        <ion-card *ngIf="content.content.public">
+        <ion-card>
             <ion-item>
                 <ion-icon name="people" color="primary" item-left></ion-icon>
                 <h4 ion-text color="secondary">Public ciblé</h4>
@@ -32,7 +16,16 @@
                 <ion-note color="note">{{content.content.lieu}}</ion-note>
             </ion-card-content>
         </ion-card>
-        <ion-card *ngIf="content.content.objectifs">
+        <ion-card *ngIf="content.content.duree">
+            <ion-item>
+                <ion-icon name="clock" color="primary" item-left></ion-icon>
+                <h4 ion-text color="secondary">Durée</h4>
+            </ion-item>
+            <ion-card-content>
+                <ion-note color="note">{{content.content.duree}}</ion-note>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
             <ion-item>
                 <ion-icon name="done-all" color="primary" item-left></ion-icon>
                 <h4 ion-text color="secondary">Pour quels objectifs</h4>
@@ -46,29 +39,38 @@
                 </ion-list>
             </ion-card-content>
         </ion-card>
-        <ion-card *ngIf="content.content.contact">
+        <ion-card *ngIf="content.content.prestationsPorteur">
             <ion-item>
-                <ion-icon name="contact" color="primary" item-left></ion-icon>
-                <h4 ion-text color="secondary">Contact</h4>
-            </ion-item>
-            <ion-card-content>
-                <ion-note color="note" (click)="openLink('content.contact')"><span ion-text color="primary">{{content.content.contact}}</span> Tèl : <span ion-text color="primary">{{content.content.tel}}</span>                    </ion-note>
-            </ion-card-content>
-        </ion-card>
-        <ion-card *ngIf="content.content.actions">
-            <ion-item>
-                <h4 ion-text color="secondary" class="line-break">La contribution de l’Office de Développement de la Coopération à l’insertion des migrants en situation administrative
-                    régulière dans le tissu socioéconomique via l’organisation en coopératives s’effectue à travers les actions
-                    suivantes :</h4>
+                <ion-icon name="briefcase" color="primary" item-left></ion-icon>
+                <h4 ion-text color="secondary">Prestations au porteur de projet</h4>
             </ion-item>
             <ion-card-content>
                 <ion-list>
-                    <ion-item *ngFor="let obj of content.content.actions">
-                        <p ion-text class="line-break" color="note">{{obj}}</p>
+                    <ion-item *ngFor="let obj of content.content.prestationsPorteur">
+                        <p class="line-break" color="note">{{obj}}</p>
                         <hr>
                     </ion-item>
                 </ion-list>
             </ion-card-content>
         </ion-card>
-    </div>
-</ion-content>
+        <ion-card *ngIf="content.content.prestations">
+            <ion-item>
+                <ion-icon name="clipboard" color="primary" item-left></ion-icon>
+                <h4 ion-text color="secondary">Prestations</h4>
+            </ion-item>
+            <ion-card-content>
+                <ion-list>
+                    <ion-item *ngFor="let obj of content.content.prestations">
+                        <p class="line-break" color="note">{{obj}}</p>
+                        <hr>
+                    </ion-item>
+                </ion-list>
+            </ion-card-content>
+        </ion-card>
+        <ion-card *ngIf="content.content.img">
+            <ion-item>
+                <ion-icon name="trending-up" color="primary" item-left></ion-icon>
+                <h4 ion-text color="secondary">Schéma de l’offre d’accompagnement des porteurs de projets</h4>
+            </ion-item>
+            <img src="assets/img/autoemploi.png" />
+        </ion-card>

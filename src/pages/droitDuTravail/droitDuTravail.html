@@ -8,23 +8,23 @@
 </ion-header>
 
 <ion-content>
+
   <ion-toolbar color="primary" no-border class="scrollable-segments">
     <ion-segment [(ngModel)]="droitTravail" color="white">
       <ion-segment-button value="Législation pour les travailleurs étrangers">
         Législation pour les travailleurs étrangers
       </ion-segment-button>
-      <ion-segment-button  value="Procédure de recrutement">
-        Procédure de recrutement 
+      <ion-segment-button value="Procédure de recrutement">
+        Procédure de recrutement
       </ion-segment-button>
-      <ion-segment-button value="Différentes formes de contrat" >
+      <ion-segment-button value="Différentes formes de contrat">
         Différentes formes de contrat
       </ion-segment-button>
-      
     </ion-segment>
   </ion-toolbar>
 
   <div [ngSwitch]="droitTravail">
-    <ion-list *ngSwitchCase="'Législation pour les travailleurs étrangers'"  >
+    <ion-list *ngSwitchCase="'Législation pour les travailleurs étrangers'">
       <ion-card>
         <ion-item>
           <ion-icon name="filing" color="primary" item-left></ion-icon>
@@ -42,42 +42,46 @@
       </ion-card>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'Procédure de recrutement'">
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetails(21)">
-            <h6 class=" line-break">Migrants ayant bénéficié de la régularisation execptionnelle</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetails(22)">
-            <h6 class=" line-break">Autres migrants en situation régulière</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
+    <ion-list *ngSwitchCase="'Procédure de recrutement'" class="scrollable-segments">
+      <ion-segment [(ngModel)]="procedureRecrutementRubrique" color="primary">
+        <ion-segment-button value="MigrantsExecptionnelle">
+          Migrants ayant bénéficié de la régularisation execptionnelle
+        </ion-segment-button>
+        <ion-segment-button value="AutresMigrants">
+          Autres migrants en situation régulière
+        </ion-segment-button>
+      </ion-segment>
+      <div [ngSwitch]="procedureRecrutementRubrique">
+        <ion-list no-padding *ngSwitchCase="'MigrantsExecptionnelle'" inset>
+          <page-modal-migrants-beneficiants>
+          </page-modal-migrants-beneficiants>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'AutresMigrants'" inset>
+          <page-modal-autre-migrants>
+          </page-modal-autre-migrants>
+        </ion-list>
+      </div>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'Différentes formes de contrat'">
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetails(31)">
-            <h6 class="line-break" >Contrat de travail pour étranger</h6>            
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetails(32)">
-            <h6 class=" line-break">Contrat d'insertion</h6>            
-            <ion-icon name="arrow-forward" item-end color="secondary" ></ion-icon>                      
-          </button>
-        </ion-card-content>
-      </ion-card>
+    <ion-list *ngSwitchCase="'Différentes formes de contrat'" class="scrollable-segments">
+      <ion-segment [(ngModel)]="DiffFormesRubriques" color="primary">
+        <ion-segment-button value="Contrat de travail pour etranger">
+          Contrat de travail pour étranger
+        </ion-segment-button>
+        <ion-segment-button value="Contrat insertion">
+          Contrat d'insertion
+        </ion-segment-button>
+      </ion-segment>
+      <div [ngSwitch]="DiffFormesRubriques">
+        <ion-list no-padding *ngSwitchCase="'Contrat de travail pour etranger'" inset>
+          <page-modal-migrants-beneficiants>
+          </page-modal-migrants-beneficiants>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'Contrat insertion'" inset>
+          <page-modal-contrat-insertion>
+          </page-modal-contrat-insertion>
+        </ion-list>
+      </div>
     </ion-list>
   </div>
 </ion-content>

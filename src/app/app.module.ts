@@ -16,30 +16,49 @@ import { AnapecPage } from '../pages/anapec/anapec';
 import { VideosPage } from '../pages/videos/videos';
 import { FaqPage } from '../pages/faq/faq';
 
-import { ModalPrestationAgencePage } from '../pages/prestations/modals/prestationsAgence/modalPrestationAgence';
+import { ModalAutoEmploiPage } from '../pages/prestations/modals/prestationsAgence/autoEmploi';
+import { ModalEntretienPositionnementPage } from '../pages/prestations/modals/prestationsAgence/entretienPositionnement';
+import { ModalAcceuilInformationPage } from '../pages/prestations/modals/prestationsAgence/modalAcceuilInformation';
+import { ModalMoiEtMarchePage } from '../pages/prestations/modals/prestationsAgence/moiEtMarche';
+import { ModalInformerOffrePage } from '../pages/prestations/modals/prestationsAgence/informerOffreEmploi';
+import { ModalRedigerCVPage } from '../pages/prestations/modals/prestationsAgence/redigerCV';
+import { ModalRedigerLettrePage } from '../pages/prestations/modals/prestationsAgence/redigerLettre';
+import { ModalPreparerEntretienPage } from '../pages/prestations/modals/prestationsAgence/preparerEntretien';
+
 import { ModalPortailAnapecPage } from '../pages/prestations/modals/serviceDistance/portailAnapec';
 import { ModalInscriptionAnapecPage } from '../pages/prestations/modals/serviceDistance/inscriptionAnapec';
 import { ModalConseilsInfosPage } from '../pages/prestations/modals/serviceDistance/conseilsInfos';
 import { ModalEmailNewsLetterPage } from '../pages/prestations/modals/serviceDistance/emailNewsLetter';
+
 import { ModalContratInsertionPage } from '../pages/droitDuTravail/modals/formesContrat/contratInsertion';
 import { ModalTravailEtrangerPage } from '../pages/droitDuTravail/modals/formesContrat/travailEtranger';
+
 import { ModalAutreMigrantsPage } from '../pages/droitDuTravail/modals/procedureRecrutement/autreMigrants';
 import { ModalMigrantsBeneficiantsPage } from '../pages/droitDuTravail/modals/procedureRecrutement/migrantsBeneficiants';
+
 import { ModalSitesRecrutementPage } from '../pages/infos/modals/marcheTravail/sitesRecrutement';
 import { ModalCentreRegionauxPage } from '../pages/infos/modals/marcheTravail/centreRegionaux';
 import { ModalActeursPublicPage } from '../pages/infos/modals/marcheTravail/acteursPublic';
+
 import { ModalSecteursRecrutePage } from '../pages/infos/modals/secteursMetiers/secteursRecrute';
 import { ModalMetiersPorteursPage } from '../pages/infos/modals/secteursMetiers/metiersPorteurs';
+
 import { ModalActeursInstitutionnelsPage } from '../pages/infos/modals/acteursInstitutionnels/acteursInsitutionnels';
+
 import { ModalAssociationsPage } from '../pages/infos/modals/acteursChamps/associations';
 import { ModalAssociationsSubPage } from '../pages/infos/modals/acteursChamps/associationsSub';
-import { ModalFormationPublicPage } from '../pages/formations/modals/modalFormationPublic';
+
+import { ModalOfpptPage } from '../pages/formations/modals/modalOfppt';
+import { ModalEntraidePage } from '../pages/formations/modals/modalEntraide';
+import { ModalOdcoPage } from '../pages/formations/modals/modalOdco';
+
 import { ModalFaqContentPage } from '../pages/faq/modals/faqContentModal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 import { PrestationModalServiceProvider } from '../providers/prestation-modal-service/prestation-modal-service';
 import { AssociationServiceProvider } from '../providers/association-service/association-service';
@@ -62,7 +81,14 @@ import { FaqServiceProvider } from '../providers/faq-service/faq-service';
     AnapecPage,
     VideosPage,
     FaqPage,
-    ModalPrestationAgencePage,
+    ModalAcceuilInformationPage,
+    ModalAutoEmploiPage,
+    ModalEntretienPositionnementPage,
+    ModalMoiEtMarchePage,
+    ModalInformerOffrePage,
+    ModalRedigerCVPage,
+    ModalRedigerLettrePage,
+    ModalPreparerEntretienPage,
     ModalPortailAnapecPage,
     ModalInscriptionAnapecPage,
     ModalConseilsInfosPage,
@@ -79,7 +105,9 @@ import { FaqServiceProvider } from '../providers/faq-service/faq-service';
     ModalActeursInstitutionnelsPage,
     ModalAssociationsPage,
     ModalAssociationsSubPage,
-    ModalFormationPublicPage,
+    ModalOfpptPage,
+    ModalEntraidePage,
+    ModalOdcoPage,
     ModalFaqContentPage
   ],
   imports: [
@@ -101,7 +129,14 @@ import { FaqServiceProvider } from '../providers/faq-service/faq-service';
     AnapecPage,
     VideosPage,
     FaqPage,
-    ModalPrestationAgencePage,
+    ModalAcceuilInformationPage,
+    ModalAutoEmploiPage,
+    ModalEntretienPositionnementPage,
+    ModalMoiEtMarchePage,
+    ModalInformerOffrePage,
+    ModalRedigerCVPage,
+    ModalRedigerLettrePage,
+    ModalPreparerEntretienPage,
     ModalPortailAnapecPage,
     ModalInscriptionAnapecPage,
     ModalConseilsInfosPage,
@@ -118,20 +153,24 @@ import { FaqServiceProvider } from '../providers/faq-service/faq-service';
     ModalActeursInstitutionnelsPage,
     ModalAssociationsPage,
     ModalAssociationsSubPage,
-    ModalFormationPublicPage,
+    ModalOfpptPage,
+    ModalEntraidePage,
+    ModalOdcoPage,
     ModalFaqContentPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     PrestationModalServiceProvider,
     InAppBrowser,
+    PhotoViewer,
     AssociationServiceProvider,
     FormationProvider,
     YoutubeVideoPlayer,
     VideosServiceProvider,
-    FaqServiceProvider
+    FaqServiceProvider,
+
   ]
 })
-export class AppModule {}
+export class AppModule { }

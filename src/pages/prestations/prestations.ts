@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, ActionSheetController, Platform, } from 'ionic-angular';
-import { ModalController } from 'ionic-angular';
+//import { ModalController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
-import { PrestationModalServiceProvider } from '../../providers/prestation-modal-service/prestation-modal-service';
+//import { PrestationModalServiceProvider } from '../../providers/prestation-modal-service/prestation-modal-service';
 
-import { ModalPrestationAgencePage } from './modals/prestationsAgence/modalPrestationAgence';
+import { ModalAcceuilInformationPage } from './modals/prestationsAgence/modalAcceuilInformation';
 import { ModalPortailAnapecPage } from './modals/serviceDistance/portailAnapec';
 import { ModalInscriptionAnapecPage } from './modals/serviceDistance/inscriptionAnapec';
 import { ModalConseilsInfosPage } from './modals/serviceDistance/conseilsInfos';
@@ -18,28 +18,34 @@ import { ModalEmailNewsLetterPage } from './modals/serviceDistance/emailNewsLett
 export class PrestationsPage {
 
   prestation: String = "prestationsAgence";
-  modalContents: Array<{ index: number, content: {} }> = [];
+  prestationAgenceRubriques : string  = "Acceuil et information en agence";
+  serviceDistanceRubriques : string = "Portail Anapec";
+  //modalContents: Array<{ index: number, content: {} }> = [];
+  //content : {index: number, content: {}};
 
   constructor(public navCtrl: NavController,
-    public modalCtrl: ModalController,
-    public modalService: PrestationModalServiceProvider,
+    //public modalCtrl: ModalController,
+    //public modalService: PrestationModalServiceProvider,
     public platform: Platform,
     public iab: InAppBrowser,
     public actionsheetCtrl: ActionSheetController) {
-
+    
+      /*
     this.modalService.getContent().subscribe(response => {
       this.modalContents = response;
     });
+    */
   }
-
+/*
   showModalDetailsPrestationAgence(index: number) {
-
     for (let modalContent of this.modalContents) {
       if (modalContent.index == index) {
-        let modal = this.modalCtrl.create(ModalPrestationAgencePage, { "modalContent": modalContent });
-        modal.present();
+        //let modal = this.modalCtrl.create(ModalPrestationAgencePage, { "modalContent": modalContent });
+        //modal.present();
+        this.content = modalContent;
       }
     }
+    return this.content;
   }
 
   showModalDetailsServiceDistance(index: number) {
@@ -61,7 +67,7 @@ export class PrestationsPage {
         break;
     }
   }
-
+*/
   openMenuSocialNetworks() {
     let actionSheet = this.actionsheetCtrl.create({
       title: 'Liens',

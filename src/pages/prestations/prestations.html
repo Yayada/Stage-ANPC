@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-toolbar color="primary" >
+  <ion-toolbar color="primary">
     <ion-segment [(ngModel)]="prestation" color="white">
       <ion-segment-button value="prestationsAgence">
         Prestations en agence
@@ -20,120 +20,106 @@
   </ion-toolbar>
 
   <div [ngSwitch]="prestation">
-    <ion-list *ngSwitchCase="'prestationsAgence'" inset>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetailsPrestationAgence(11)">
-              <h6 class=" line-break">Acceuil et information en agence</h6>
-              <ion-icon name="arrow-forward" item-end color="secondary" ></ion-icon>          
-            </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetailsPrestationAgence(12)">
-            <h6 class="line-break">Entretien de positionnement</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-item class="no-padding">
-            <h6 class="line-break"> Ateliers d'information </h6>
-          </ion-item>
-          <ion-list inset>
-            <button ion-item class="no-padding" (click)="showModalDetailsPrestationAgence(131)">
-              <p class="line-break">Moi et le marché du travail</p>
-              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-            </button>
-            <button ion-item class="no-padding" (click)="showModalDetailsPrestationAgence(132)">
-              <p class="line-break">S'informer sur l'offre d'emploi</p> 
-              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-            </button>
-          </ion-list>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-item class="no-padding">
-            <h6 class="line-break">Ateliers de recherche d'emploi</h6>
-          </ion-item>
-          <ion-list inset>
-            <button ion-item class="no-padding" (click)="showModalDetailsPrestationAgence(141)">
-              <p class="line-break">Rédiger son CV</p>                
-              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-            </button>
-            <button ion-item class="no-padding" (click)="showModalDetailsPrestationAgence(142)">
-              <p class="line-break">Rédiger ses lettres de motivation</p>
-              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-            </button>
-            <button ion-item class="no-padding" (click)="showModalDetailsPrestationAgence(143)">
-              <p class="line-break">Préparer son entretien d'embauche</p>
-              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-            </button>
-          </ion-list>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetailsPrestationAgence(15)">
-              <h6 class="line-break" >Auto emploi</h6>
-              <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-            </button>
-        </ion-card-content>
-      </ion-card>
+    <ion-list *ngSwitchCase="'prestationsAgence'" inset no-padding style="margin: 0" class="scrollable-segments">
+      <ion-segment [(ngModel)]="prestationAgenceRubriques" color="primary">
+        <ion-segment-button value="Acceuil et information en agence">
+          Acceuil et information en agence
+        </ion-segment-button>
+        <ion-segment-button value="Entretien de positionnement">
+          Entretien de positionnement
+        </ion-segment-button>
+        <ion-segment-button value="Ateliers information">
+          Ateliers d'information
+        </ion-segment-button>
+        <ion-segment-button value="Ateliers de recherche emploi">
+          Ateliers de recherche d'emploi
+        </ion-segment-button>
+        <ion-segment-button value="Auto emploi">
+          Auto emploi
+        </ion-segment-button>
+      </ion-segment>
+      <div [ngSwitch]="prestationAgenceRubriques">
+        <ion-list no-padding *ngSwitchCase="'Acceuil et information en agence'" inset>
+          <page-modal-acceuil-information>
+          </page-modal-acceuil-information>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'Entretien de positionnement'" inset>
+          <page-modal-entretien-positionnement>
+          </page-modal-entretien-positionnement>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'Ateliers information'" inset>
+          <ion-slides pager>
+            <ion-slide>
+              <page-modal-moi-marche>
+              </page-modal-moi-marche>
+            </ion-slide>
+            <ion-slide>
+              <page-modal-informer-offre>
+              </page-modal-informer-offre>
+            </ion-slide>
+          </ion-slides>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'Ateliers de recherche emploi'" inset>
+          <ion-slides pager>
+            <ion-slide>
+              <page-modal-rediger-cv>
+              </page-modal-rediger-cv>
+            </ion-slide>
+            <ion-slide>
+              <page-modal-preparer-entretien>
+              </page-modal-preparer-entretien>
+            </ion-slide>
+            <ion-slide>
+              <page-modal-rediger-lettre>
+              </page-modal-rediger-lettre>
+            </ion-slide>
+          </ion-slides>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'Auto emploi'" inset>
+          <page-modal-auto-emploi>
+          </page-modal-auto-emploi>
+        </ion-list>
+      </div>
     </ion-list>
-
-    <ion-list *ngSwitchCase="'serviceDistance'" inset>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetailsServiceDistance(21)">
-            <h6 class="line-break" >Portail Anapec</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetailsServiceDistance(22)">
-            <h6 class="line-break" >M'inscrire à l'Anapec</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding"(click)="showModalDetailsServiceDistance(23)">
-            <h6 class="line-break" >Conseils et infos</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="showModalDetailsServiceDistance(24)">
-            <h6 class="line-break" >Email, sms , newsletter</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="openMenuSocialNetworks()">
-            <h6 class="line-break" >Réseaux Sociaux</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <button ion-item class="no-padding" (click)="openMenuContact()">
-            <h6 class="line-break">Téléphone</h6>
-            <ion-icon name="arrow-forward" item-end color="secondary"></ion-icon>          
-          </button>
-        </ion-card-content>
-      </ion-card>
+    <ion-list *ngSwitchCase="'serviceDistance'" inset inset no-padding style="margin: 0" class="scrollable-segments">
+      <ion-segment [(ngModel)]="serviceDistanceRubriques" color="primary">
+        <ion-segment-button value="Portail Anapec">
+          Portail Anapec
+        </ion-segment-button>
+        <ion-segment-button value="inscrireAnapec">
+          M'inscrire à l'Anapec
+        </ion-segment-button>
+        <ion-segment-button value="Conseils et infos">
+          Conseils et infos
+        </ion-segment-button>
+        <ion-segment-button value="EmailSmS">
+          Email, Sms ,NewsLetter
+        </ion-segment-button>
+        <ion-segment-button value="Reseaux Sociaux" (click)="openMenuSocialNetworks()">
+          Réseaux Sociaux
+        </ion-segment-button>
+        <ion-segment-button value="tel" (click)="openMenuContact()">
+          Téléphone
+        </ion-segment-button>
+      </ion-segment>
+      <div [ngSwitch]="serviceDistanceRubriques">
+        <ion-list no-padding *ngSwitchCase="'Portail Anapec'" inset>
+          <page-modal-portail-anapec>
+          </page-modal-portail-anapec>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'inscrireAnapec'" inset>
+          <page-modal-inscription-anapec>
+          </page-modal-inscription-anapec>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'Conseils et infos'" inset>
+          <page-modal-coneils-infos>
+          </page-modal-coneils-infos>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'EmailSmS'" inset>
+          <page-modal-email-newsLetter>
+          </page-modal-email-newsLetter>
+        </ion-list>
+      </div>
     </ion-list>
   </div>
 </ion-content>

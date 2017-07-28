@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'page-modal-travail-etranger',
@@ -7,12 +6,8 @@ import { ViewController } from 'ionic-angular';
 })
 export class ModalTravailEtrangerPage {
 
-  constructor(public viewCtrl: ViewController) {
+  constructor() {
 
-  }
-
-  dismiss() {
-    this.viewCtrl.dismiss();
   }
 
 }

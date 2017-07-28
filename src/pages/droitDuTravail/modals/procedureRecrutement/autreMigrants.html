@@ -1,71 +1,55 @@
-<ion-header>
-    <ion-toolbar color="light">
-        <ion-title>
-            Autres migrants en situation régulière
-        </ion-title>
-        <ion-buttons start>
-            <button ion-button (click)="dismiss()">
-                <span ion-text color="white" showWhen="ios">Annuler</span>
-                <ion-icon color="white" name="md-close" showWhen="android,windows"></ion-icon>     
-            </button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
-<ion-content>
-    <ion-card>
+<ion-card>
+    <ion-item>
+        <ion-icon name="people" color="primary" item-left></ion-icon>
+        <h5 ion-text color="secondary" class="line-break">Autres migrants en situation régulière</h5>
+    </ion-item>
+</ion-card>
+<ion-card>
+    <ion-card-content>
         <ion-item>
-            <ion-icon name="people" color="primary" item-left></ion-icon>
-            <h5 ion-text color="secondary" class="line-break">Autres migrants en situation régulière</h5>
+            <ion-icon name="briefcase" color="primary" item-left></ion-icon>
+            <h4 ion-text color="secondary" class="line-break">Le Service de l’Emploi des Migrants , instruit et vise</h4>
         </ion-item>
-    </ion-card>
-    <ion-card>
-        <ion-card-content>
+        <ion-list>
             <ion-item>
-                <ion-icon name="briefcase" color="primary" item-left></ion-icon>
-                <h4 ion-text color="secondary" class="line-break">Le Service de l’Emploi des Migrants , instruit et vise</h4>
+                <p class="line-break" color="note">Les contrats de travail à l’immigration pour les étrangers (premier établissement, renouvellement)
+                </p>
+                <hr>
             </ion-item>
-            <ion-list>
-                <ion-item>
-                    <p class="line-break" color="note">Les contrats de travail à l’immigration pour les étrangers (premier établissement, renouvellement)
-                    </p>
-                    <hr>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" color="note">Les demandes de maintien en service des étrangers atteints par la limite d’âge.</p>
-                    <hr>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" color="note">Les imprimés à remplir sont mis à la disposition sur le site du MEAS : <span ion-text color="primary"
-                            (click)="openLink('www.emploi.gov.ma')"><b>www.emploi.gov.ma </b></span>,Service en ligne / services
-                        au profit des migrants</p>
-                    <hr>
-                </ion-item>
-            </ion-list>
-        </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-content>
             <ion-item>
-                <ion-icon name="information-circle" color="primary" item-left></ion-icon>
-                <h4 ion-text color="secondary" class="line-break">Pour toutes informations complémentaires, prière de :</h4>
+                <p class="line-break" color="note">Les demandes de maintien en service des étrangers atteints par la limite d’âge.</p>
+                <hr>
             </ion-item>
-            <ion-list>
-                <ion-item>
-                    <p class="line-break" color="note"> Contacter le Bureau d’Accueil et d’Information du Service à l'adresse : Service de l’Emploi des Migrants,
-                        <span ion-text color="primary">5, rue Tameslouht, 10010 RABAT</span></p>
-                    <hr>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" color="note">Consulter le site du ministère de l’emploi : <span ion-text color="primary" (click)="openLink('www.emploi.gov.ma')"><b>www.emploi.gov.ma </b></span>services
-                        en ligne « Services au profit des migrants » </p>
-                    <hr>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" color="note">Ou consulter le site de l’Anapec : <span ion-text color="primary" (click)="openLink('www.anapec.org')"><b>www.anapec.org </b></span>rubrique
-                        Créer votre espace employeur/ salarié étrangers</p>
-                    <hr>
-                </ion-item>
-            </ion-list>
-        </ion-card-content>
-    </ion-card>
-</ion-content>
+            <ion-item>
+                <p class="line-break" color="note">Les imprimés à remplir sont mis à la disposition sur le site du MEAS : <span ion-text color="primary" (click)="openLink('www.emploi.gov.ma')"><b>www.emploi.gov.ma </b></span>,Service
+                    en ligne / services au profit des migrants</p>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+</ion-card>
+<ion-card>
+    <ion-card-content>
+        <ion-item>
+            <ion-icon name="information-circle" color="primary" item-left></ion-icon>
+            <h4 ion-text color="secondary" class="line-break">Pour toutes informations complémentaires, prière de :</h4>
+        </ion-item>
+        <ion-list>
+            <ion-item>
+                <p class="line-break" color="note"> Contacter le Bureau d’Accueil et d’Information du Service à l'adresse : Service de l’Emploi des Migrants,
+                    <span ion-text color="primary">5, rue Tameslouht, 10010 RABAT</span></p>
+                <hr>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" color="note">Consulter le site du ministère de l’emploi : <span ion-text color="primary" (click)="openLink('www.emploi.gov.ma')"><b>www.emploi.gov.ma </b></span>services
+                    en ligne « Services au profit des migrants » </p>
+                <hr>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" color="note">Ou consulter le site de l’Anapec : <span ion-text color="primary" (click)="openLink('www.anapec.org')"><b>www.anapec.org </b></span>rubrique
+                    Créer votre espace employeur/ salarié étrangers</p>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+</ion-card>

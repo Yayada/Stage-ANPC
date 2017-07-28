@@ -1,0 +1,81 @@
+<ion-card padding>
+    <ion-card-header>
+        Moi et le marché du travail
+    </ion-card-header>
+</ion-card>
+<ion-card>
+    <ion-item>
+        <ion-icon name="people" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary">Public ciblé</h4>
+    </ion-item>
+    <ion-card-content>
+        <ion-note color="note">{{content.content.public}}</ion-note>
+    </ion-card-content>
+</ion-card>
+<ion-card *ngIf="content.content.lieu">
+    <ion-item>
+        <ion-icon name="pin" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary">Lieu</h4>
+    </ion-item>
+    <ion-card-content>
+        <ion-note color="note">{{content.content.lieu}}</ion-note>
+    </ion-card-content>
+</ion-card>
+<ion-card *ngIf="content.content.duree">
+    <ion-item>
+        <ion-icon name="clock" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary">Durée</h4>
+    </ion-item>
+    <ion-card-content>
+        <ion-note color="note">{{content.content.duree}}</ion-note>
+    </ion-card-content>
+</ion-card>
+<ion-card>
+    <ion-item>
+        <ion-icon name="done-all" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary">Pour quels objectifs</h4>
+    </ion-item>
+    <ion-card-content>
+        <ion-list>
+            <ion-item *ngFor="let obj of content.content.objectifs">
+                <p class="line-break" color="note">{{obj}}</p>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+</ion-card>
+<ion-card *ngIf="content.content.prestationsPorteur">
+    <ion-item>
+        <ion-icon name="briefcase" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary">Prestations au porteur de projet</h4>
+    </ion-item>
+    <ion-card-content>
+        <ion-list>
+            <ion-item *ngFor="let obj of content.content.prestationsPorteur">
+                <p class="line-break" color="note">{{obj}}</p>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+</ion-card>
+<ion-card *ngIf="content.content.prestations">
+    <ion-item>
+        <ion-icon name="clipboard" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary">Prestations</h4>
+    </ion-item>
+    <ion-card-content>
+        <ion-list>
+            <ion-item *ngFor="let obj of content.content.prestations">
+                <p class="line-break" color="note">{{obj}}</p>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+</ion-card>
+<ion-card *ngIf="content.content.img">
+    <ion-item>
+        <ion-icon name="trending-up" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary">Schéma de l’offre d’accompagnement des porteurs de projets</h4>
+    </ion-item>
+    <img src="assets/img/autoemploi.png" />
+</ion-card>
