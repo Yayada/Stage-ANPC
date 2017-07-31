@@ -1,125 +1,146 @@
-<ion-header>
-    <ion-toolbar color="light">
-        <ion-title>
-            Centre régionnaux et chambres de commerce
-        </ion-title>
-        <ion-buttons start>
-            <button ion-button (click)="dismiss()">
-                <span ion-text color="white" showWhen="ios">Annuler</span>
-                <ion-icon color="white" name="md-close" showWhen="android,windows"></ion-icon>     
-            </button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
-<ion-content>
-    <ion-card>
-        <ion-item>
-            <ion-icon name="list-box" color="primary" item-left></ion-icon>
-            <h4 ion-text color="secondary" class="line-break">Liste des Chambres de commerce d'industrie et de Services</h4>
-        </ion-item>
-        <ion-card-content>
-            <ion-list>
-                <ion-item>
-                    <p class="line-break" ion-text ion-text color="primary" (click)="openLink('www.fcmcis.ma')">Fédération des chambres marocaines de commerce, d'industrie et de Services.</p>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" ion-text color="primary" (click)="openLink('www.ccis-oujda.ma')">La chambre de commerce d'industrie et de Services d'Oujda
-                    </p>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" ion-text color="primary" (click)="openLink('www.meknescci.ma')">La chambre de Commerce,d'Industrie et de Services de Meknes
-                    </p>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" ion-text color="primary" (click)="openLink('www.ccist.ma')">La Chambre de Commerce d'Industrie et de Services de Tétouan
-                    </p>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" ion-text color="primary" (click)="openLink('www.khouribga.cci.ma')">La Chambre de Commerce d`Industrie et de Services de khouribga
-                    </p>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" ion-text color="primary" (click)="openLink('www.ccirabat.ma')">La chambre de Commerce,d'Industrie et de Services de Rabat
-                    </p>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" ion-text color="primary" (click)="openLink('www.casablanca.cci.ma')">La chambre de Commerce,d'Industrie et de Services de Casablanca
-                    </p>
-                </ion-item>
-                <ion-item>
-                    <p class="line-break" ion-text color="primary" (click)="openLink('www.ccisfes.org')">La chambre de Commerce,d'Industrie et de Services de Fès
-                    </p>
-                </ion-item>
+<ion-card padding>
+    <ion-card-header ion-text class="line-break">
+        Centres régionaux et chambres de commerce
+    </ion-card-header>
+</ion-card>
+<ion-card>
+    <ion-item>
+        <ion-icon name="list-box" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary" class="line-break">Liste des Chambres de commerce d'industrie et de Services</h4>
+    </ion-item>
+    <ion-card-content>
+        <ion-list>
+            <ion-item>
+                <p class="line-break" ion-text ion-text color="primary" (click)="openLink('www.fcmcis.ma')">Fédération des chambres marocaines de commerce, d'industrie et de Services.</p>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" ion-text color="primary" (click)="openLink('www.ccis-oujda.ma')">La chambre de commerce d'industrie et de Services d'Oujda
+                </p>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" ion-text color="primary" (click)="openLink('www.meknescci.ma')">La chambre de Commerce,d'Industrie et de Services de Meknes
+                </p>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" ion-text color="primary" (click)="openLink('www.ccist.ma')">La Chambre de Commerce d'Industrie et de Services de Tétouan
+                </p>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" ion-text color="primary" (click)="openLink('www.khouribga.cci.ma')">La Chambre de Commerce d`Industrie et de Services de khouribga
+                </p>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" ion-text color="primary" (click)="openLink('www.ccirabat.ma')">La chambre de Commerce,d'Industrie et de Services de Rabat
+                </p>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" ion-text color="primary" (click)="openLink('www.casablanca.cci.ma')">La chambre de Commerce,d'Industrie et de Services de Casablanca
+                </p>
+            </ion-item>
+            <ion-item>
+                <p class="line-break" ion-text color="primary" (click)="openLink('www.ccisfes.org')">La chambre de Commerce,d'Industrie et de Services de Fès
+                </p>
+            </ion-item>
 
-            </ion-list>
-        </ion-card-content>
-    </ion-card>
+        </ion-list>
+    </ion-card-content>
+</ion-card>
 
-    <ion-card>
-        <ion-item>
-            <ion-icon name="card" color="primary" item-left></ion-icon>
-            <h4 ion-text color="secondary" class="line-break">Liste des centres régionaux d'investissement</h4>
-        </ion-item>
-        <ion-card-content>
-            <ion-list>
-                <ion-item>
-                    <h2 ion-text ><ion-icon name="pin" color="secondary" item-left></ion-icon><b>Agadir</b></h2>
-                    <h3><ion-icon name="map" color="secondary" item-left></ion-icon>SOUSS-MASSA-DRAA</h3>
-                    <p><ion-icon name="call" color="secondary" item-left></ion-icon>048.82.69.77 / 048.82.69.80</p>
-                    <p ion-text (click)="openLink('www.cri-agadir.ma')" color="primary"><ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.cri-agadir.ma</p>
+<ion-card>
+    <ion-item>
+        <ion-icon name="card" color="primary" item-left></ion-icon>
+        <h4 ion-text color="secondary" class="line-break">Liste des centres régionaux d'investissement</h4>
+    </ion-item>
+    <ion-card-content>
+        <ion-list>
+            <ion-item>
+                <h2 ion-text>
+                    <ion-icon name="pin" color="secondary" item-left></ion-icon><b>Agadir</b></h2>
+                <h3>
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>SOUSS-MASSA-DRAA</h3>
+                <p>
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>048.82.69.77 / 048.82.69.80</p>
+                <p ion-text (click)="openLink('www.cri-agadir.ma')" color="primary">
+                    <ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.cri-agadir.ma</p>
                 <hr>
-                </ion-item>
-                <ion-item>
-                    <h2 ion-text ><ion-icon name="pin" color="secondary" item-left></ion-icon><b> Alhoceima</b></h2>
-                    <h3><ion-icon name="map" color="secondary" item-left></ion-icon>TAZA-TAOUNATE-AL HOCEIMA</h3>
-                    <p><ion-icon name="call" color="secondary" item-left></ion-icon>039.39.98.39 / 039.39.98.39</p>
-                    <p ion-text color="primary" (click)="openLink('www.alhoceimainvest.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.alhoceimainvest.ma</p>
-                    <hr>
-                </ion-item>
-                <ion-item>
-                    <h2 ion-text ><ion-icon name="pin" color="secondary" item-left></ion-icon><b> Beni-Mellal</b></h2>
-                    <h3><ion-icon name="map" color="secondary" item-left></ion-icon>TADLA-AZILAL</h3>
-                    <p><ion-icon name="call" color="secondary" item-left></ion-icon>023.48.20.72 / 023.48.92.62</p>
-                    <p ion-text color="primary" (click)="openLink('www.tadlazilalinvest.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.tadlazilalinvest.ma</p>
+            </ion-item>
+            <ion-item>
+                <h2 ion-text>
+                    <ion-icon name="pin" color="secondary" item-left></ion-icon><b> Alhoceima</b></h2>
+                <h3>
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>TAZA-TAOUNATE-AL HOCEIMA</h3>
+                <p>
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>039.39.98.39 / 039.39.98.39</p>
+                <p ion-text color="primary" (click)="openLink('www.alhoceimainvest.ma')">
+                    <ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.alhoceimainvest.ma</p>
                 <hr>
-                </ion-item>
-                <ion-item>
-                    <h2 ion-text ><ion-icon name="pin" color="secondary" item-left></ion-icon><b> Casablanca</b></h2>
-                    <h3><ion-icon name="map" color="secondary" item-left></ion-icon>GRAND CASABLANCA</h3>
-                    <p><ion-icon name="call" color="secondary" item-left></ion-icon>022.48.18.88</p>
-                    <p ion-text color="primary" (click)="openLink('www.casainvest.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.casainvest.ma</p>
-                    <hr>
-                </ion-item>
-                <ion-item>
-                    <h2 ion-text ><ion-icon name="pin" color="secondary" item-left></ion-icon><b> Fés</b></h2>
-                    <h3><ion-icon name="map" color="secondary" item-left></ion-icon>FES-BOULEMANE</h3>
-                    <p><ion-icon name="call" color="secondary" item-left></ion-icon>055.65.20.57 / 055.94.04.94</p>
-                    <p ion-text color="primary" (click)="openLink('www.crifes.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.crifes.ma</p>
+            </ion-item>
+            <ion-item>
+                <h2 ion-text>
+                    <ion-icon name="pin" color="secondary" item-left></ion-icon><b> Beni-Mellal</b></h2>
+                <h3>
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>TADLA-AZILAL</h3>
+                <p>
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>023.48.20.72 / 023.48.92.62</p>
+                <p ion-text color="primary" (click)="openLink('www.tadlazilalinvest.ma')">
+                    <ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.tadlazilalinvest.ma</p>
                 <hr>
-                </ion-item>
-                <ion-item>
-                    <h2 ion-text ><ion-icon name="pin" color="secondary" item-left></ion-icon><b> Guelmim</b></h2>
-                    <h3><ion-icon name="map" color="secondary" item-left></ion-icon>GUELMIM-ES SEMARA</h3>
-                    <p><ion-icon name="call" color="secondary" item-left></ion-icon>048.77.17.77 / 048 77 20 99</p>
-                    <p ion-text color="primary" (click)="openLink('www.criguelmim.com')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.criguelmim.com</p>
-                    <hr>
-                </ion-item>
-                <ion-item>
-                    <h2 ion-text ><ion-icon name="pin" color="secondary" item-left></ion-icon><b>Kenitra</b></h2>
-                    <h3><ion-icon name="map" color="secondary" item-left></ion-icon>GHARB-CHRARDA-BNI HSSEN</h3>
-                    <p><ion-icon name="call" color="secondary" item-left></ion-icon>037.37.46.27 / 037.37.45.36</p>
-                    <p ion-text color="primary" (click)="openLink('www.kenitrainvesti.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.kenitrainvesti.ma</p>
+            </ion-item>
+            <ion-item>
+                <h2 ion-text>
+                    <ion-icon name="pin" color="secondary" item-left></ion-icon><b> Casablanca</b></h2>
+                <h3>
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>GRAND CASABLANCA</h3>
+                <p>
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>022.48.18.88</p>
+                <p ion-text color="primary" (click)="openLink('www.casainvest.ma')">
+                    <ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.casainvest.ma</p>
                 <hr>
-                </ion-item>
-                <ion-item>
-                    <h2 ion-text ><ion-icon name="pin" color="secondary" item-left></ion-icon><b> Laayoune</b></h2>
-                    <h3><ion-icon name="map" color="secondary" item-left></ion-icon>LAAYOUNE-BOUJDOUR-SAKIA AL HAMRA</h3>
-                    <p><ion-icon name="call" color="secondary" item-left></ion-icon>048.89.11.89/048.99.12.01</p>
-                    <p ion-text color="primary" (click)="openLink('www.laayouneinvest.ma')"><ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.laayouneinvest.ma</p>
-                    <hr>
-                </ion-item>
-            </ion-list>
-        </ion-card-content>
-    </ion-card>
-
-</ion-content>
+            </ion-item>
+            <ion-item>
+                <h2 ion-text>
+                    <ion-icon name="pin" color="secondary" item-left></ion-icon><b> Fés</b></h2>
+                <h3>
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>FES-BOULEMANE</h3>
+                <p>
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>055.65.20.57 / 055.94.04.94</p>
+                <p ion-text color="primary" (click)="openLink('www.crifes.ma')">
+                    <ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.crifes.ma</p>
+                <hr>
+            </ion-item>
+            <ion-item>
+                <h2 ion-text>
+                    <ion-icon name="pin" color="secondary" item-left></ion-icon><b> Guelmim</b></h2>
+                <h3>
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>GUELMIM-ES SEMARA</h3>
+                <p>
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>048.77.17.77 / 048 77 20 99</p>
+                <p ion-text color="primary" (click)="openLink('www.criguelmim.com')">
+                    <ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.criguelmim.com</p>
+                <hr>
+            </ion-item>
+            <ion-item>
+                <h2 ion-text>
+                    <ion-icon name="pin" color="secondary" item-left></ion-icon><b>Kenitra</b></h2>
+                <h3>
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>GHARB-CHRARDA-BNI HSSEN</h3>
+                <p>
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>037.37.46.27 / 037.37.45.36</p>
+                <p ion-text color="primary" (click)="openLink('www.kenitrainvesti.ma')">
+                    <ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.kenitrainvesti.ma</p>
+                <hr>
+            </ion-item>
+            <ion-item>
+                <h2 ion-text>
+                    <ion-icon name="pin" color="secondary" item-left></ion-icon><b> Laayoune</b></h2>
+                <h3>
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>LAAYOUNE-BOUJDOUR-SAKIA AL HAMRA</h3>
+                <p>
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>048.89.11.89/048.99.12.01</p>
+                <p ion-text color="primary" (click)="openLink('www.laayouneinvest.ma')">
+                    <ion-icon name="desktop" color="secondary" item-left></ion-icon>http://www.laayouneinvest.ma</p>
+                <hr>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+</ion-card>

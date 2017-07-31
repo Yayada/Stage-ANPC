@@ -29,6 +29,7 @@ import { ModalPortailAnapecPage } from '../pages/prestations/modals/serviceDista
 import { ModalInscriptionAnapecPage } from '../pages/prestations/modals/serviceDistance/inscriptionAnapec';
 import { ModalConseilsInfosPage } from '../pages/prestations/modals/serviceDistance/conseilsInfos';
 import { ModalEmailNewsLetterPage } from '../pages/prestations/modals/serviceDistance/emailNewsLetter';
+import { ModalReseauxContactPage } from '../pages/prestations/modals/serviceDistance/reseauxSociauxContact';
 
 import { ModalContratInsertionPage } from '../pages/droitDuTravail/modals/formesContrat/contratInsertion';
 import { ModalTravailEtrangerPage } from '../pages/droitDuTravail/modals/formesContrat/travailEtranger';
@@ -93,6 +94,7 @@ import { FaqServiceProvider } from '../providers/faq-service/faq-service';
     ModalInscriptionAnapecPage,
     ModalConseilsInfosPage,
     ModalEmailNewsLetterPage,
+    ModalReseauxContactPage,
     ModalContratInsertionPage,
     ModalTravailEtrangerPage,
     ModalAutreMigrantsPage,
@@ -141,6 +143,7 @@ import { FaqServiceProvider } from '../providers/faq-service/faq-service';
     ModalInscriptionAnapecPage,
     ModalConseilsInfosPage,
     ModalEmailNewsLetterPage,
+    ModalReseauxContactPage,
     ModalContratInsertionPage,
     ModalTravailEtrangerPage,
     ModalAutreMigrantsPage,

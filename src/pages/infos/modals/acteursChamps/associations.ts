@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { AssociationServiceProvider } from '../../../../providers/association-service/association-service';
 
@@ -8,12 +7,13 @@ import { AssociationServiceProvider } from '../../../../providers/association-se
   templateUrl: 'associations.html'
 })
 export class ModalAssociationsPage {
+
   allAssociations: Array<{ shortName: string, name: string, tel: string, mail: string, city: string }> = [];
   associations: Array<{ shortName: string, name: string, tel: string, mail: string, city: string }> = [];
   villeAssociations: Array<{ shortName: string, name: string, tel: string, mail: string, city: string }> = [];
   ville: string;
 
-  constructor(public viewCtrl: ViewController, public iab: InAppBrowser, public associationService: AssociationServiceProvider) {
+  constructor(public iab: InAppBrowser, public associationService: AssociationServiceProvider) {
 
     this.getContent();
   }
@@ -24,10 +24,6 @@ export class ModalAssociationsPage {
       this.allAssociations = response;
       this.associations = response;
     });
-  }
-
-  dismiss() {
-    this.viewCtrl.dismiss();
   }
 
   onVilleChange(ville: string) {

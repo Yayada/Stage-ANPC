@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ActionSheetController, Platform, } from 'ionic-angular';
 //import { ModalController } from 'ionic-angular';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 
 //import { PrestationModalServiceProvider } from '../../providers/prestation-modal-service/prestation-modal-service';
 
@@ -26,8 +26,7 @@ export class PrestationsPage {
   constructor(public navCtrl: NavController,
     //public modalCtrl: ModalController,
     //public modalService: PrestationModalServiceProvider,
-    public platform: Platform,
-    public iab: InAppBrowser,
+    //public platform: Platform,
     public actionsheetCtrl: ActionSheetController) {
     
       /*
@@ -36,6 +35,8 @@ export class PrestationsPage {
     });
     */
   }
+
+
 /*
   showModalDetailsPrestationAgence(index: number) {
     for (let modalContent of this.modalContents) {
@@ -68,6 +69,7 @@ export class PrestationsPage {
     }
   }
 */
+/*
   openMenuSocialNetworks() {
     let actionSheet = this.actionsheetCtrl.create({
       title: 'Liens',
@@ -138,5 +140,5 @@ export class PrestationsPage {
     });
     actionSheet.present();
   }
-
+*/
 }

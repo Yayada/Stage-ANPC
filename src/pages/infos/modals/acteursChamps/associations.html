@@ -1,53 +1,37 @@
-<ion-header>
-    <ion-toolbar color="light">
-        <ion-title>
-            Associations
-        </ion-title>
-        <ion-buttons start>
-            <button ion-button (click)="dismiss()">
-                <span ion-text color="white" showWhen="ios">Annuler</span>
-                <ion-icon color="white" name="md-close" showWhen="android,windows"></ion-icon>     
-            </button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
-<ion-content>
-    <ion-card>
+<ion-card>
+    <ion-item>
+        <ion-icon name="home" color="primary" item-left></ion-icon>
+        <h3 ion-text color="secondary" class="line-break">Associations</h3>
+    </ion-item>
+    <ion-card-content>
         <ion-item>
-            <ion-icon name="home" color="primary" item-left></ion-icon>
-            <h3 ion-text color="secondary" class="line-break">Associations</h3>
+            <ion-label>Ville</ion-label>
+            <ion-select [(ngModel)]="ville" (ionChange)="onVilleChange(ville)">
+                <ion-option value="all">Toutes les villes</ion-option>
+                <ion-option value="agadir">Agadir</ion-option>
+                <ion-option value="hoceima">Al Hoceima</ion-option>
+                <ion-option value="casablanca">Casablanca</ion-option>
+                <ion-option value="fes">Fès</ion-option>
+                <ion-option value="marrakech">Marrakech</ion-option>
+                <ion-option value="martil">Martil</ion-option>
+                <ion-option value="nador">Nador</ion-option>
+                <ion-option value="oujda">Oujda</ion-option>
+                <ion-option value="rabat">Rabat</ion-option>
+                <ion-option value="tanger">Tanger</ion-option>
+            </ion-select>
         </ion-item>
-        <ion-card-content>
-            <ion-item>
-                <ion-label>Ville</ion-label>
-                <ion-select [(ngModel)]="ville" (ionChange) = "onVilleChange(ville)" >
-                    <ion-option value="all">Toutes les villes</ion-option>
-                    <ion-option value="agadir">Agadir</ion-option>
-                    <ion-option value="hoceima">Al Hoceima</ion-option>
-                    <ion-option value="casablanca">Casablanca</ion-option>
-                    <ion-option value="fes">Fès</ion-option>
-                    <ion-option value="marrakech">Marrakech</ion-option>
-                    <ion-option value="martil">Martil</ion-option>
-                    <ion-option value="nador">Nador</ion-option>
-                    <ion-option value="oujda">Oujda</ion-option>
-                    <ion-option value="rabat">Rabat</ion-option>
-                    <ion-option value="tanger">Tanger</ion-option>
-                </ion-select>
+        <ion-list>
+            <ion-item *ngFor="let assoc of  associations">
+                <h2 ion-text color="primary" class="line-break">
+                    <ion-icon name="home" color="secondary" item-left></ion-icon>{{assoc.shortName}} </h2>
+                <h3 ion-text class="line-break">
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>{{assoc.name}}</h3>
+                <p class="line-break">
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>{{assoc.tel}}</p>
+                <p class="line-break">
+                    <ion-icon name="mail" color="secondary" item-left></ion-icon>{{assoc.mail}}</p>
+                <hr>
             </ion-item>
-            <ion-list>
-                <ion-item *ngFor="let assoc of  associations">
-                    <h2 ion-text color="primary" class="line-break">
-                        <ion-icon name="home" color="secondary" item-left></ion-icon>{{assoc.shortName}} </h2>
-                    <h3 ion-text class="line-break">
-                        <ion-icon name="map" color="secondary" item-left></ion-icon>{{assoc.name}}</h3>
-                    <p class="line-break">
-                        <ion-icon name="call" color="secondary" item-left></ion-icon>{{assoc.tel}}</p>
-                    <p class="line-break">
-                        <ion-icon name="mail" color="secondary" item-left></ion-icon>{{assoc.mail}}</p>
-                    <hr>
-                </ion-item>
-            </ion-list>
-        </ion-card-content>
-    </ion-card>
-
-</ion-content>
+        </ion-list>
+    </ion-card-content>
+</ion-card>

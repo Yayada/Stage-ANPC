@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
 import { AssociationServiceProvider } from '../../../../providers/association-service/association-service';
 
 @Component({
@@ -13,7 +12,7 @@ export class ModalAssociationsSubPage {
   villeAssociations: Array<{ shortName: string, name: string, tel: string, mail: string, city: string }> = [];
   ville: string;
 
-  constructor(public viewCtrl: ViewController, public associationService: AssociationServiceProvider) {
+  constructor( public associationService: AssociationServiceProvider) {
 
     this.getContent();
   }
@@ -24,10 +23,6 @@ export class ModalAssociationsSubPage {
       this.allAssociations = response;
       this.associations = response;
     });
-  }
-
-  dismiss() {
-    this.viewCtrl.dismiss();
   }
 
   onVilleChange(ville: string) {

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 
@@ -9,12 +8,8 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
 })
 export class ModalSecteursRecrutePage {
 
-  constructor(public viewCtrl: ViewController, public iab: InAppBrowser,private photoViewer: PhotoViewer) {
+  constructor( public iab: InAppBrowser,private photoViewer: PhotoViewer) {
 
-  }
-
-  dismiss() {
-    this.viewCtrl.dismiss();
   }
 
   openLink(link:string){
@@ -22,8 +17,6 @@ export class ModalSecteursRecrutePage {
   }
 
   showImage(link : string){
-    console.log("clicked");
     this.photoViewer.show(link);
-
   }
 }

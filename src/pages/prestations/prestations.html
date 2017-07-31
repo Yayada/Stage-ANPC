@@ -95,11 +95,8 @@
         <ion-segment-button value="EmailSmS">
           Email, Sms ,NewsLetter
         </ion-segment-button>
-        <ion-segment-button value="Reseaux Sociaux" (click)="openMenuSocialNetworks()">
-          Réseaux Sociaux
-        </ion-segment-button>
-        <ion-segment-button value="tel" (click)="openMenuContact()">
-          Téléphone
+        <ion-segment-button value="Reseaux Sociaux contact" >
+          Contact / Réseaux Sociaux
         </ion-segment-button>
       </ion-segment>
       <div [ngSwitch]="serviceDistanceRubriques">
@@ -118,6 +115,10 @@
         <ion-list no-padding *ngSwitchCase="'EmailSmS'" inset>
           <page-modal-email-newsLetter>
           </page-modal-email-newsLetter>
+        </ion-list>
+        <ion-list no-padding *ngSwitchCase="'Reseaux Sociaux contact'" inset>
+          <page-modal-reseaux-contact>
+          </page-modal-reseaux-contact>
         </ion-list>
       </div>
     </ion-list>

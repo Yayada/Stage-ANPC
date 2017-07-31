@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController , ModalController } from 'ionic-angular';
-
+import { NavController /*, ModalController */} from 'ionic-angular';
 
 import { ModalSitesRecrutementPage } from './modals/marcheTravail/sitesRecrutement';
 import { ModalCentreRegionauxPage } from './modals/marcheTravail/centreRegionaux';
@@ -18,11 +17,14 @@ import { ModalAssociationsSubPage } from './modals/acteursChamps/associationsSub
 export class InfosPage {
 
   infos : String = "marcheTravail";
+  marcheTravailRubriques : string = "Acteurs publics prives";
+  acteursRubriques : string = "Associations";
 
-  constructor(public navCtrl: NavController, public modalCtrl : ModalController) {
+  constructor(public navCtrl: NavController/*, public modalCtrl : ModalController*/) {
 
   }
 
+  /*
   showModalDetails(index : number){
 
     let modal = null;
@@ -53,5 +55,5 @@ export class InfosPage {
         modal.present();
         break;
     }    
-  }
+  }*/
 }

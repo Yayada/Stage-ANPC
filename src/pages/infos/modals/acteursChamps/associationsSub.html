@@ -1,69 +1,53 @@
-<ion-header>
-    <ion-toolbar color="light">
-        <ion-title>
-            Associations subventionnées
-        </ion-title>
-        <ion-buttons start>
-            <button ion-button (click)="dismiss()">
-                <span ion-text color="white" showWhen="ios">Annuler</span>
-                <ion-icon color="white" name="md-close" showWhen="android,windows"></ion-icon>     
-            </button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
-<ion-content>
-    <ion-card>
+<ion-card>
+    <ion-item>
+        <ion-icon name="home" color="primary" item-left></ion-icon>
+        <h3 ion-text color="secondary" class="line-break">Associations subventionnées</h3>
+    </ion-item>
+    <ion-card-content>
         <ion-item>
-            <ion-icon name="home" color="primary" item-left></ion-icon>
-            <h3 ion-text color="secondary" class="line-break">Associations subventionnées</h3>
+            <ion-label>Ville</ion-label>
+            <ion-select [(ngModel)]="ville" (ionChange)="onVilleChange(ville)">
+                <ion-option value="all">Toutes les villes</ion-option>
+                <ion-option value="casablanca">Casablanca</ion-option>
+                <ion-option value="Essouira">Essouira</ion-option>
+                <ion-option value="Fès">Fès</ion-option>
+                <ion-option value="Oujda">Oujda</ion-option>
+                <ion-option value="Rabat">Rabat</ion-option>
+                <ion-option value="Safi">Safi</ion-option>
+                <ion-option value="Salé">Salé</ion-option>
+                <ion-option value="Sefrou">Sefrou</ion-option>
+                <ion-option value="Tanger">Tanger</ion-option>
+            </ion-select>
         </ion-item>
-        <ion-card-content>
-            <ion-item>
-                <ion-label>Ville</ion-label>
-                <ion-select [(ngModel)]="ville" (ionChange)="onVilleChange(ville)">
-                    <ion-option value="all">Toutes les villes</ion-option>
-                    <ion-option value="casablanca">Casablanca</ion-option>
-                    <ion-option value="Essouira">Essouira</ion-option>
-                    <ion-option value="Fès">Fès</ion-option>
-                    <ion-option value="Oujda">Oujda</ion-option>
-                    <ion-option value="Rabat">Rabat</ion-option>
-                    <ion-option value="Safi">Safi</ion-option>
-                    <ion-option value="Salé">Salé</ion-option>
-                    <ion-option value="Sefrou">Sefrou</ion-option>
-                    <ion-option value="Tanger">Tanger</ion-option>
-                </ion-select>
+        <ion-list>
+            <ion-item *ngFor="let assoc of  associations">
+                <h2 ion-text color="primary" class="line-break">
+                    <ion-icon name="home" color="secondary" item-left> </ion-icon>{{assoc.name}} </h2>
+                <h3 class="line-break">
+                    <ion-icon name="map" color="secondary" item-left></ion-icon>{{assoc.city}}</h3>
+                <p class="line-break">
+                    <ion-icon name="people" color="secondary" item-left></ion-icon>{{assoc.president}}</p>
+                <p class="line-break">
+                    <ion-icon name="call" color="secondary" item-left></ion-icon>{{assoc.tel}}</p>
+                <p class="line-break">
+                    <ion-icon name="mail" color="secondary" item-left></ion-icon>{{assoc.mail}}</p>
+                <p class="line-break">
+                    <ion-icon name="clipboard" color="secondary" item-left></ion-icon>Projet : {{assoc.projet}}</p>
+                <p class="line-break">
+                    <ion-icon name="list-box" color="secondary" item-left></ion-icon>
+                    Composantes :
+
+                    <ion-list inset>
+                        <ion-item *ngFor="let cmp of assoc.composants" class="line-break">
+                            <p ion-text class="line-break" color="note">{{cmp}} </p>
+                            <hr>
+                        </ion-item>
+                    </ion-list>
+                </p>
+
+                <p class="line-break">
+                    <ion-icon name="people" color="secondary" item-left></ion-icon>Bénéficiaires : {{assoc.beneficiaires}}</p>
             </ion-item>
-            <ion-list>
-                <ion-item *ngFor="let assoc of  associations">
-                    <h2 ion-text color="primary" class="line-break">
-                        <ion-icon name="home" color="secondary" item-left> </ion-icon>{{assoc.name}} </h2>
-                    <h3 class="line-break">
-                        <ion-icon name="map" color="secondary" item-left></ion-icon>{{assoc.city}}</h3>
-                    <p class="line-break">
-                        <ion-icon name="people" color="secondary" item-left></ion-icon>{{assoc.president}}</p>
-                    <p class="line-break">
-                        <ion-icon name="call" color="secondary" item-left></ion-icon>{{assoc.tel}}</p>
-                    <p class="line-break">
-                        <ion-icon name="mail" color="secondary" item-left></ion-icon>{{assoc.mail}}</p>
-                    <p class="line-break">
-                        <ion-icon name="clipboard" color="secondary" item-left></ion-icon>Projet : {{assoc.projet}}</p>
-                    <p class="line-break">
-                        <ion-icon name="list-box" color="secondary" item-left></ion-icon>
-                        Composantes : 
-
-                        <ion-list inset>
-                            <ion-item *ngFor="let cmp of assoc.composants" class="line-break">
-                                <p ion-text class="line-break" color="note">{{cmp}} </p>
-                                <hr>
-                            </ion-item>
-                        </ion-list>
-                    </p>
-
-                    <p class="line-break">
-                        <ion-icon name="people" color="secondary" item-left></ion-icon>Bénéficiaires : {{assoc.beneficiaires}}</p>
-                </ion-item>
-            </ion-list>
-        </ion-card-content>
-    </ion-card>
-
-</ion-content>
+        </ion-list>
+    </ion-card-content>
+</ion-card>
